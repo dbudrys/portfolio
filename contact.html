@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+	<head>
+		<meta charset="UTF-8">
+
+		<title>Domas Portfolio Portfolio</title>
+
+		<link rel="icon" type="image/png" href="images/logo.png" />
+
+
+    <meta name="keywords" content="Domas Budrys, Data Science, Analysis, Bootstrap, Resume, Portfolio, Projects">
+		<meta name="description" content="I am majoring in Computer Science and Quantitative Methods. My focus
+		is on data analysis, database administration, and website development." />
+		
+		<meta name="viewport" content="width=divice-width, initial-scale=1">
+
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+		<link rel="stylesheet" href="style/normalize.css">
+		<link rel="stylesheet" href="style/style.css">
+
+    <!-- card-grid section style -->
+		<link rel="stylesheet" href="style/card-style.css">
+
+		<!--Scrolling/Animation reviel -->
+		<script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
+    <!-- <script src="//code.jquery.com/jquery-1.10.2.js"></script> -->
+    
+
+
+    <!--Load other files (header, footer)-->
+    <script>
+      $(function(){
+        $("#headerFile").load("header-navbar.html");
+        $("#footerFile").load("footer.html");
+      });
+    </script>
+
+	</head>
+
+  <body>
+
+    <!--Loading header/navbar file-->
+    <div id="headerFile"></div>
+
+		<section class="top-text">
+			<div class="container">
+                <div class="row">
+
+
+	        <div class="col-md-12 col-sm-12">
+						<div class="text-center">
+							<h1>
+								<b>Contact me</b>
+							</h1>
+						</div>
+          </div>
+
+				</div>
+			</div>
+		</section>
+
+		<section>
+			<div class="container">
+
+				<div class="card" style="width: 80%;">
+						<ul class="list-group list-group-flush">
+							<li class="list-group-item"><a href="https://linkedin.com/in/domas-bu" target="_blank"><i class="fa fa-linkedin-square icon-style" aria-hidden="true"></i></a></li>
+							<li class="list-group-item"><a href="mailto:dbudrys@my.apsu.edu" ><i class="fa fa-envelope icon-style" aria-hidden="true" ></i></a></li>
+							<li class="list-group-item"><a href="https://github.com/dbudrys" target="_blank"><i class="fa fa-github-square icon-style" aria-hidden="true" ></i></a></li>
+					
+						</ul>
+					</div>
+
+			
+			</div>
+		</section>
+
+
+	<br>
+
+	<!-- Animation:
+	Must have at the top:
+	<script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
+	<script src="//code.jquery.com/jquery-1.10.2.js"></script>
+	-->
+	<script>
+	window.sr = ScrollReveal();
+
+
+
+				sr.reveal('.top-text', {
+					duration:2000,
+					origin:'top'
+				});
+	</script>
+
+
+	<!-- Load footer -->
+	<div id="footerFile"></div>
+
+    </body>
+</html>

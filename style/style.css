@@ -557,6 +557,7 @@ page[size="A4"] {
 
 
 /* contact form desing */
+/*
 #contact{
   background:url(../images/email_background.png);
   background-repeat: no-repeat;
@@ -567,12 +568,11 @@ page[size="A4"] {
 
   color:#555;
 }
+*/
 
-#contact label {
-  font-size: 24px;
-  color:#fff;
+ #hello{
+  color:red ;
 }
-
 
 footer{
   display: block;
