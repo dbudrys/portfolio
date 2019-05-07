@@ -1,0 +1,604 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,100,900);
+/*
+style.css
+
+*/
+
+/*Color Palette - Southwest Summer Color
+ *
+ *     http://www.color-hex.com/color-palette/60703
+ *
+ *	#ECECEC		Background
+ *	#5b0e0e
+ *	#497570
+ *	#b58c44
+ *	#494740		Navbar Text Color
+ *	#6c4f2f		Navbar Hover Color
+
+*/
+
+
+body, html {
+
+    height: 100%;
+    margin: 20px 0 0 0 ;
+    background: #ECECEC;
+
+    color: #555;
+
+	font-family: 'Roboto', sans-serif;
+
+
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+
+
+}
+
+h1, h2 {
+    color: #494740;
+}
+
+    /* The index.html image used */
+.bg-image {
+
+
+    height: 100%;
+    background: url("../images/background-img.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+
+
+    /*WORKS WELL WITH Small screen
+      height: auto;
+      background: url("../images/background-img.jpg");
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-attachment: fixed;
+      background-size: cover;
+    */
+
+}
+
+/*Set background size when it is less that 450px */
+@media
+  (max-width: 450px) {
+  .bg-image {
+    background: url("../images/background-img-small.jpg") no-repeat center center fixed;
+    width: auto ;
+max-width: 100% ;
+height: auto ;
+background-size: cover;
+  }
+
+}
+
+
+.container {
+    width: 90%;
+    /*Orginal Width 1170 */
+    margin: auto;
+    /*background-color: #fff;*/
+}
+
+.navbar-default{
+    background:#ECECEC;
+    border: 0px;
+
+}
+
+#index-hello  h1{
+
+	color: #ECECEC;
+	font-size: 5em;
+}
+
+
+
+.index-text  p {
+	color: #ECECEC;
+
+
+}
+
+#intro img{
+    width: 90%;
+
+}
+
+/* Navbar style settings*/
+/*
+#main-brand{
+    color: #494740;
+	font-size: 30px;
+}
+
+#main-brand:hover{
+    color: red;
+	font-size: 30px;
+}
+*/
+
+
+
+.navbar .brand, .navbar .nav > li > a {
+    color: #494740;
+    transition: 0.5s ease;
+    font-weight: 550;
+}
+.navbar .brand, .navbar .nav > li > a:hover {
+    color: #fff;
+    background-color: #B8B8B8;
+    transition: 0.5s ease;
+}
+
+.scrolled {
+	background-color: #BABABA;
+	opacity: 0.9;
+	transition: 0.5s ease;
+}
+
+.scrolled .navbar {
+	height: 50px;
+	transition: 0.5s ease;
+}
+
+.scrolled #navbar-me {
+	background-color: #BABABA;
+	transition: 0.5s ease;
+}
+
+.navbar-toggle{
+    background-color: #ECECEC;
+    transition: 0.5s ease;
+}
+
+.navbar-header .navbar-toggle:hover{
+     background-color: #8F8F8F;
+     transition: 0.5s ease;
+
+}
+
+#navbar-me{
+    background-color: #ECECEC;
+    transition: 0.5s ease;
+}
+
+.dropdown-menu{
+    background-color: #ECECEC;
+    transition: 0.5s ease;
+    color: #494740;
+    font-weight: 550;
+}
+
+.dropdown-menu > li > a:hover{
+    display: inherit;
+    background-color: #8F8F8F;
+    color: #fff;
+    transition: 0.5s ease;
+    font-weight: 550;
+}
+
+
+.collapse .dropdown ul li:hover{
+	background-color: #8F8F8F;
+    color: #fff;
+    transition: 0.5s ease;
+
+}
+/*End of Navbar */
+
+
+#intro p {
+    margin: 50px 50px 50px 50px;
+    font-size: 16px;
+}
+
+
+
+
+#hello-text p{
+    font-size: 30px;
+    margin-bottom: 0px;
+}
+
+
+/* Large Button */
+.btn-lg {
+
+    border-width:  4px;
+    border-radius: 20px;
+    border-color: #ECECEC;;
+    background-color: transparent;
+    padding: 20px;
+    transition:  0.5s ease;
+}
+
+.btn-lg span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition:  0.5s ease;
+    color:  #ECECEC;
+	font-weight: 400;
+}
+
+.btn-lg span:after{
+    content: '>>';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    left:100px;
+    right: -25px;
+    transition:  0.5s ease;
+
+}
+
+
+.btn-lg:hover span {
+    padding-right: 25px;
+    transition:  0.5s ease;
+
+}
+
+.btn-lg:hover span:after {
+    opacity: 1;
+    right: 0;
+
+    transition:  0.5s ease;
+
+}
+/* The End of Large Button */
+
+
+/* Set all icon colors */
+.icon {
+    color: black;
+}
+
+
+
+/* Features section */
+.features p {
+
+    font-size: 16px;
+}
+
+/* End of Features section*/
+
+
+
+/*Profile section including image */
+.profile {
+	background-color: #D6D6D6;
+
+}
+
+
+
+
+.profile-right{
+	/* background-color: red; */
+}
+
+.profile-left{
+	padding-top: 10px;
+	padding-bottom: 10px;
+
+
+}
+
+.profile-text-right{
+	padding-top: 10px;
+	padding-bottom: 10px;
+
+	height: 100%;
+	text-align:justify;
+}
+
+
+.img-responsive{
+	padding-left:5px;
+	border-radius: 15%;
+}
+
+/*End of Profile section */
+
+
+
+
+
+
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.4);
+    transition: 0.3s;
+    margin:6%;
+}
+
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.8);
+}
+
+.card-body {
+    padding:8px;
+}
+
+
+
+
+/* Style inputs */
+input[type=text], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+}
+
+input[type=submit]
+{
+    background-color: gray;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: #4d4d4d;
+}
+
+/*END of contact form desing */
+
+
+
+
+
+
+
+
+
+
+/* GOOD Hover option
+.btn-2 {
+  letter-spacing: 0;
+
+
+  transition-property: all;
+  transition-duration: .6s;
+  transition-timing-function: ease;
+}
+
+.btn-2:hover,
+.btn-2:active {
+  letter-spacing: 5px;
+}
+
+.btn-2:after,
+.btn-2:before {
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  border: 1px solid rgba(255, 255, 255, 0);
+  bottom: 0px;
+  content: "";
+  display: block;
+  margin: 0 auto;
+  position: relative;
+  transition: all 480ms ease-in-out;
+  width: 0;
+}
+
+.btn-2:hover:after,
+.btn-2:hover:before {
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  border-color: #fff;
+  transition: width 480ms ease-in-out;
+  width: 100%;
+}
+
+.btn-2:hover:before {
+  bottom: auto;
+  top: 0;
+  width: 100%;
+}
+
+*/
+
+
+
+
+
+
+
+
+/* Hover idea taken from https://codepen.io/thomasvaeth/pen/JKxRNk */
+/* Home Button */
+.btn-draw {
+	margin-top: 7px;
+	font-weight: bold;
+	position: relative;
+	display: inline-block;
+	border-radius:10%;
+	color: #494740;
+	font-size:17px;
+	border-bottom: 2px solid #8F8F8F;
+	cursor: pointer;
+	overflow: hidden;
+	transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
+}
+.btn-draw:after {
+	content: '';
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	height: 100%;
+	width: 2px;
+	background: #8F8F8F;
+	-webkit-transform: translateY(100%);
+		  transform: translateY(100%);
+	transition: -webkit-transform 0.2s ease-in-out;
+	transition: transform 0.2s ease-in-out;
+	transition: transform 0.2s ease-in-out, -webkit-transform 0.2s ease-in-out;
+	transition-delay: 0.6s;
+}
+.btn-draw > span {
+	position: relative;
+	display: block;
+	padding: 0.3em 0.5em 0.3em 0.5em;
+
+	color: inherit;
+}
+.btn-draw > span:before, .btn-draw > span:after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: #8F8F8F;
+  transition: -webkit-transform 0.2s ease-in-out;
+  transition: transform 0.2s ease-in-out;
+  transition: transform 0.2s ease-in-out, -webkit-transform 0.2s ease-in-out;
+}
+.btn-draw > span:before {
+  height: 2px;
+  width: 100%;
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+  transition-delay: 0.4s;
+}
+.btn-draw > span:after {
+  height: 100%;
+  width: 2px;
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%);
+  transition-delay: 0.2s;
+}
+.btn-draw:hover:after, .btn-draw:hover > span:before, .btn-draw:hover > span:after {
+  -webkit-transform: translate(0, 0);
+          transform: translate(0, 0);
+}
+.btn-draw:hover:after {
+  transition-delay: 0s;
+}
+.btn-draw:hover > span:before {
+  transition-delay: 0.2s;
+}
+.btn-draw:hover > span:after {
+  transition-delay: 0.4s;
+}
+.btn-draw:hover {
+	text-decoration: none;
+  color: #fff;
+  background-color: #8F8F8F;
+  transition-delay: 0.6s;
+}
+/* End of home button*/
+
+
+
+#intro-resume a{
+	color: black;
+}
+
+.resume-download-btn  {
+
+    border-width:  4px;
+    border-radius: 20px;
+    border-color: #555;
+		padding: 15px;
+	}
+
+.resume-download-btn span  {
+		color: #555;
+	}
+
+
+
+
+
+/*Resume page Setup*/
+page {
+  background: white;
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 0.5cm;
+  box-shadow: 0 0 0.5cm rgba(0,0,0,0.5);
+}
+page[size="A4"] {
+  width: 21cm;
+  height: 29.7cm;
+}
+
+.resume1{
+	background: url("../images/resume1.png") ;
+	background-repeat: no-repeat;
+    background-size: 21cm 29.7cm;
+}
+
+.resume2{
+	background: url("../images/resume2.png") ;
+	background-repeat: no-repeat;
+    background-size: 21cm 29.7cm;
+}
+/*End Resume Setup*/
+
+
+
+
+
+
+/* contact form desing */
+#contact{
+  background:url(../images/email_background.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+	border-radius: 4%;
+
+  color:#555;
+}
+
+#contact label {
+  font-size: 24px;
+  color:#fff;
+}
+
+
+footer{
+  display: block;
+}
+
+.icon-style{
+  margin-top: -5px;
+  color: #8F8F8F;
+  font-size: 30px;
+}
+
+.icon-style:hover{
+  color: #555;
+  transition: 0.5s ease;
+}
+
+.some{
+
+    float: none;
+    display: table-cell;
+    vertical-align: bottom;
+
+}
+
+.profile-right span{
+  float: none;
+  display: table-cell;
+  vertical-align: bottom;
+}
