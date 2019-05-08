@@ -1,0 +1,406 @@
+
+
+
+body
+{
+       
+    margin-top: 70px;
+    font-size:16px;
+
+}
+
+
+
+
+h1, h2, h3, h4, h5, h6
+{
+    font-family: Poppins;
+}
+
+p
+{
+    font-family: 'Roboto', sans-serif;
+}
+
+
+.navbar-default{
+    background: #fff;
+    border: 0px;
+    font-family: Poppins;
+    
+}
+
+.navbar-brand{
+    font-size: 20px;
+    color: #000 !important;
+    font-weight: bold;
+}
+
+#showcase h1{
+    font-size: 50px;
+    margin-bottom: 20px;
+    
+    
+}
+
+#showcase img
+{
+    width: 90%;
+    margin-left: 60px;
+}
+
+
+#showcase .showcase-right
+{
+    margin-top: 90px;
+}
+
+
+.testimonial
+{
+    background: #f1f1f1;
+    padding: 50px 0 30px 0;
+    text-align:center;
+    margin-top:40px;
+
+}
+
+.testimonial p {
+    font-size: 26px;
+    font-family: 'Josefin Sans';
+    color:#000;
+}
+
+
+.testimonial p.customer{
+    font-size:18px;
+    color:#667;
+}
+
+#info1_1{
+    padding-bottom: 20px;
+    background: #040b94;
+}
+#info1_2{
+    padding-bottom: 20px;
+    background: #778477;
+}
+#info1_3{
+    padding-bottom: 20px;
+    background: #F9F9F9;
+}
+#info1_4{
+    padding-bottom: 20px;
+    background: #09022b;
+}
+
+#info1_5{
+    padding-bottom: 20px;
+    background: #2C669A;
+}
+
+
+
+
+#info1_1 .info-right{
+    margin-top: 60px;
+  
+    
+}
+
+#info1_2 .info-right{
+    margin-top: 60px;
+  
+    
+}
+
+#info1_3 .info-right{
+    margin-top: 60px;
+  
+    
+}
+
+#info1_4 .info-right{
+    margin-top: 60px;
+   
+}
+
+#info1_5 .info-right{
+    margin-top: 60px;
+   
+}
+
+
+
+#info1_1 img {
+     margin-top: 60px;
+    margin-left: 17%;
+    width:60%;
+    height:60%;
+}
+
+#info1_2 img {
+    margin-top: 60px;
+    margin-left: 17%;
+    width:60%;
+    height:60%;
+    
+}
+
+#info1_3 img {
+    margin-top: 60px;
+    margin-left: 17%;
+    width:60%;
+    height:600%;
+    
+}
+
+#info1_4 img {
+   margin-top: 60px;
+    margin-left: 17%;
+    
+}
+
+#info1_5 img {
+       margin-top: 60px;
+    margin-left: 17%;
+    width:60%;
+    height:60%;
+    
+}
+
+
+#info1_1 p, #info1_1 h2{
+ color:#fff;
+    
+}
+
+#info1_5 p, #info1_5 h2{
+ color:#fff;
+    
+}
+
+#laser_img{
+    margin-top: 40px;
+    margin-left: -80%;
+    margin-bottom: -10%;
+    width:270%;
+    height:270%;
+}
+
+
+#info2{
+    margin:20px 0 60px 0;
+}
+
+#contact{
+    background:url(../img/email_background.png);
+    background-repeat: no-repeat;
+    background-position: center; 
+    padding: 40px;
+    color:#fff;
+    border-top:#333 7px solid;
+    border-bottom: #333 7px solid;
+    
+  
+    
+}
+
+
+
+footer{
+    padding: 30px;
+}
+
+#showcase img {
+    margin-left: -40px;
+}
+
+
+
+
+/****************************/
+.table {
+    border-radius: 5px;
+    width: 50%;
+    margin: 0 auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    float: none;
+}
+
+
+#banner_btc img{
+    
+       width: 74%;;
+    height:70px;
+}
+#banner_btc{
+    margin-left: -12%;
+}
+
+
+
+#banner_eth{
+    margin-left: -12%;
+}
+
+#banner_eth img{
+    width: 74%;;
+    height:70px;
+    
+    text-align:center;
+   
+}
+
+
+
+#banner_davor{
+    margin-left: -12%;
+}
+
+#banner_davor img{
+    width: 74%;;
+    height:70px;
+    
+    text-align:center;
+   
+}
+
+
+#banner_laser img{
+
+  height:70px;
+  width: 74%;
+
+}
+
+#banner_laser{
+     margin-left: -12%; 
+}
+
+
+#banner_hextra img{
+
+  height:70px;
+  width: 74%;
+}
+#banner_hextra{
+    margin-left: -12%;
+}
+
+
+
+
+#lending_platforms{
+    margin:  25px;
+}
+#bitcoin_wallets{
+    margin:  25px;
+}
+
+
+.hyper{
+    margin-bottom: 20px;
+    margin-top: -10px;
+}
+
+.icon_language{
+    width: 40px;
+    height:  40px;
+}
+
+#wallets img{
+    width: 80px;
+    height: 80px;
+    display: block;
+ 
+    margin-top: 10px; 
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+#wallets h1{
+    margin-top:0px;
+    font-size: 24px;
+}
+
+
+#exodus_wallet{
+    background: #4C668C;
+}
+
+
+#jaxx_wallet{
+    background: #FF953E;
+}
+
+
+#copay_wallet{
+    background: #66AD8F;
+}
+
+#green_wallet{
+    background: #CCEC8B;
+}
+
+#mycelium_wallet{
+    background: #608F9E;
+}
+
+
+
+.wallet_description {
+   text-align: center;
+   
+}
+
+.coin_logo{
+font-size: 2em;
+}
+
+
+.wallet_btn{
+    margin: 10px;
+}
+
+
+
+.price_col{
+      text-align: center;
+}
+
+.price_col i {
+   font-size: 4.5em;
+ 
+}
+
+.price_col h3{
+    margin-top: -12px;
+    font-weight: bold;
+    font-size: 1.7em;
+}
+
+.price_col span{
+    font-weight: bold;
+}
+
+.info-right{
+    margin-top: 12px;
+}
+
+.twitter-follow-button{
+    margin-top: 4px;
+}
+
+
+
+#custom_header{
+    font size: 100%;
+    font-family: Georgia, Serif;
+    text-align: center;
+    
+}
+
+

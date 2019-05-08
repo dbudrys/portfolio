@@ -1,0 +1,865 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta charset="UTF-8">
+
+	<link rel="alternate" hreflang="lt" href="http://labascrypto.one/" />
+
+
+
+
+    <title>Labas Crypto : Internetinės Valiutos Investavimas</title>
+
+
+	 <meta name="description" content="Galimybė užsidirbti iš turimų bitkoinų investuojant į internetinių valiutų programas.
+										Pasinaudokite galimybę užsidirbti pinigų iš nuolatos  kylančios
+										bitkoino kainos. Taip pat sužinokite apie populiariausias interneto valiutų
+										pinigines."  />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+
+
+    <link rel="shortcut icon" href="img/title_logo.png" type="image/png">
+
+
+
+
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700%7CRoboto%7CJosefin+Sans:100,300,400,500" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+	<link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/cryptocoins.css">
+	<link rel="stylesheet" href="style/style_donations.css">
+
+    <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
+
+    <script src="https://use.fontawesome.com/bebe298ced.js"></script>
+
+    <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+
+
+
+
+
+
+</head>
+
+<body>
+
+
+     <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar2">
+				        <span class="icon-bar"></span>
+				        <span class="icon-bar"></span>
+				        <span class="icon-bar"></span>
+				      </button>
+
+
+		  <a id="brand-name" class="navbar-brand" href="#"></a>
+
+		  <script>
+			   var string = "Labas Crypto";
+			   var str = string.split("");
+			   var el = document.getElementById('brand-name');
+			   (function animate() {
+			   str.length > 0 ? el.innerHTML += str.shift() : clearTimeout(running);
+			   var running = setTimeout(animate, 150);
+			   })();
+		  </script>
+
+        </div>
+
+        <div id="navbar2" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#showcase">Pradžia</a></li>
+            <li><a href="#invest">Investuoti</a></li>
+			<li><a href="#bitcoin_wallets1">Piniginės</a></li>
+            <li><a href="#contact">Kontaktai</a></li>
+
+          <li>
+               <a href="#" class="dropdown-toggle" data-toggle="dropdown">LT <img style="width: 22px; height: 22px;" src="img/lt.png" alt="Lithuania"> <b class="caret"></b></a>
+                      <ul class="dropdown-menu"  style="width: 50px;">
+
+                        <li><a href="index.html"> <img class="icon_language" src="img/lt.png" alt="Lithuania"> LT</a></li>
+                      <!--  <li><a href="/wordpress"> <img class="icon_language" src="img/ru.png" alt="Russian"> RU</a></li> -->
+
+                      </ul>
+            </li>
+
+
+          </ul>
+
+
+
+        </div><!--/.nav-collapse -->
+
+
+
+      </div>
+    </nav>
+
+
+
+    <section id="showcase">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-sm-6">
+
+
+                    <div class="showcase-left">
+                        <img src="img/bitcoin_guy.jpg" alt="bitkoinu investavimas ir uzdarbis" >
+                    </div>
+                </div>
+
+
+                <div class="col-md-6 col-sm-6">
+                   <div class="showcase-right">
+                     <h1>LABAS Investuotojau, </h1>
+
+                     <p>Šis tinklalapis yra sukartas žmonėms kurie domisi kriptovaliuta, jų piniginėmis, ir ieško
+                     papildomų būdų užsidirbti pinigų investuojant: Bitcoin, Ethereum, LiteCoin, Dash ir t. t.
+                     Bitkoinų ir kitų internetinių valiutų kursai kyla nuolatos, todėl investuojant į šiuos tinklalapius
+					 galima užsidirbti didelių palūkanų. Šie internetiniai puslapiai, arba programos,
+                     siūlo didelius procentus už jūsų investuotus pinigus. Kiekvienas iš šių bitkoinu investavimo puslapių siūlo skirtingus
+					 procentų gražinimo metodus ir laikotarpus, todėl kalite pasirinkti labiausiai sau tinkantį.
+					 <br><b>Visos pateiktos internetinių valiutų programos šiame tinklalapyje yra veikiančios ir naudojamos tinklalapio kūrėjų</b></p>
+
+				   </div>
+                   <br>
+
+                </div>
+            </div>
+        </div>
+
+
+
+    </section>
+
+
+
+     <section id="price_twitter">
+        <div class="container">
+            <div class="row">
+
+
+	 <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
+     <script src='https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.0/jquery-ui.min.js'></script>
+
+     <script src="js/bitcoin-widget.js"></script>
+
+
+                <div class="col-md-6">
+                    <div class="info-left">
+
+
+
+                    <div class="col-md-6 col-sm-3 col-xs-6">
+                         	 <div class="price_col bitcoin">
+								   <i class="coin_logos cc BTC" title="Bitcoin"></i>
+								   <h3>Bitcoin</h3>
+								   $<span id="bprice"></span>
+								   <div class="chan">Prieaugis (24h): <span id="bchange"></span>%</div>
+							</div>
+                    </div>
+
+
+                    <div class="col-md-6 col-sm-3 col-xs-6">
+                        <div class="price_col ethereum">
+							  <i class="coin_logo cc ETH" title="Ethereum"></i>
+							  <h3>Ethereum</h3>
+							  $<span id="eprice"></span>
+							  <div class="chan">Prieaugis (24h): <span id="echange"></span>%</div>
+					   </div>
+                   </div>
+
+
+
+					<div class="col-md-6 col-sm-3 col-xs-6">
+                         	 <div class="price_col litecoin">
+								   <i class="coin_logo cc LTC" title="Litecoin"></i>
+								   <h3>Litecoin</h3>
+								   $<span id="price"></span>
+								   <div class="chan">Prieaugis (24h): <span id="change"></span>%</div>
+							   </div>
+                    </div>
+
+
+                    <div class="col-md-6 col-sm-3 col-xs-6">
+						 <div class="price_col bitcoin-cash">
+							  <i class="coin_logo cc BCH" title="Bitcoin Cash"></i>
+							  <h3>Bitcoin Cash</h3>
+							  $<span id="chprice"></span>
+							  <div class="chan">Prieaugis (24h): <span id="chchange"></span>%</div>
+						  </div>
+                   </div>
+
+
+				 <br>
+
+
+                    </div>
+                 </div>
+
+
+
+
+                <div class="col-md-6">
+
+                 <div class="info-right">
+
+
+
+
+
+                    <div class="col-md-6 col-sm-3 col-xs-6">
+                        <div class="price_col ripple">
+							  <i class="coin_logo cc XRP" title="Ripple"></i>
+							  <h3>Ripple</h3>
+							  $<span id="ripprice"></span>
+							  <div class="chan">Prieaugis (24h): <span id="ripchange"></span>%</div>
+					   </div>
+                   </div>
+
+
+					<div class="col-md-6 col-sm-3 col-xs-6">
+                         	 <div class="price_col DASH">
+								   <i class="coin_logo cc DASH" title="DASH"></i>
+								   <h3>Dash</h3>
+								   $<span id="daprice"></span>
+								   <div class="chan">Prieaugis (24h): <span id="dachange"></span>%</div>
+							   </div>
+                    </div>
+
+
+                    <div class="col-md-6 col-sm-3 col-xs-6">
+						 <div class="price_col xmr">
+							  <i class="coin_logo cc XMR" title="Monero"></i>
+							  <h3>Monero</h3>
+							  $<span id="mprice"></span>
+							  <div class="chan">Prieaugis (24h): <span id="mchange"></span>%</div>
+						  </div>
+                   </div>
+
+					 <div class="col-md-6 col-sm-3 col-xs-6">
+                         	 <div class="price_col NEO">
+								   <i class="coin_logos cc NEO" title="NEO"></i>
+								   <h3>Neo</h3>
+								   $<span id="neprice"></span>
+								   <div class="chan">Prieaugis (24h): <span id="nechange"></span>%</div>
+							</div>
+                    </div>
+
+
+
+
+
+
+                 </div>
+                </div>
+
+
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+    <section class="testimonial">
+        <div class="container">
+            <p>
+                Žemiau pateikti bitkoinų interneto investavimo puslapiai suteikia galimybę žmonėms užsidirbti papildomų pinigų investuojantis savo turimus bitcoinus ar kitą kriptovaliutą.
+                Vis dėlto, investuojant internetinę valiutą į šiuos puslapius lankytojai nėra garantuoti, kad investavimo programos puslapis veiks ilgą laiką.
+                Yra patartina, kad žmonės investuotų į kriptovaliutą nedaugiau nei esate pasirengę pralošti.
+            </p>
+
+            <p class="customer">- Labas Crypto</p>
+        </div>
+
+    </section>
+
+
+
+
+    <div id="donations"></div>
+
+	<script>
+		  $(function(){
+			$("#donations").load("extra_html/donations_twitter.html");
+
+		  });
+	 </script>
+
+
+
+
+
+
+
+
+     <section id="lending_platforms">
+        <div class="container">
+
+            <div class="row">
+
+               <div class="col-md-12">
+                 <h1 class="text-center"> Investuoti </h1>
+               </div>
+
+           </div>
+        </div>
+     </section>
+
+
+ <script src="js/coin-price.js"></script>
+
+
+
+
+
+
+    <section id="info1_1">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-md-6 col-sm-6">
+                    <div class="info-left">
+                        <a href="https://hashflare.io/r/189DDFCF" target="_blank">
+                        <img src="img/hashflare.png" alt="Hashflare investavimas su bitkoinu valiuta">
+                        </a>
+
+                    </div>
+                 </div>
+
+
+                <div class="col-md-6">
+
+                <div class="info-right">
+            <h2> HashFlare</h2>
+            <div class="hyper"><a href="https://hashflare.io/r/22B7F0B" target="_blank">Apsilankyk Hashflare</a></div>
+
+
+
+                    <p>
+                        Hashflare, tai einamuoju momentu pelningiausia "cloud mining" programa internetinėje erdvėje. Šis projektas buvo sukurtas
+						Estijoje ir žmonių pasitikejimas šia investavimo programa auga su kiekviena diena. Hashflare yra viena iš nedaugelio
+						"could mining" siūlančių programų kuri visdar turi veikiančius bitkoinų valiutos kontraktus. Atsižvelgianti į bitkoino
+						valiutos kursą, Hashflare programa per vienerius metus gali padvigubinti jūsų investuotą sumą. Hashflare investavimo programa
+						siūlo keletą skirtingų investavimo būdų, įskaitant BTC, ETH, ZEC, DASH.
+                    </p>
+
+                    <br>
+                    <p> <b>Pasitikėjimas 9.5/10</b></p>
+                    <br>
+
+                   <a class="btn btn-default btn-lg showcase-btn" href="https://hashflare.io/r/22B7F0B">Hashflare</a>
+
+
+                </div>
+
+                </div>
+            </div>
+<!--
+            <div id="banner_btc">
+             <a href="https://hashflare.io/r/22B7F0B" target="_blank">
+               <img src="img/hashflare-banner.gif" alt="EthConnect uzdarbis su bitkoinais">
+             </a>
+            </div>
+-->
+        </div>
+    </section>
+
+
+<!--
+
+    <hr>
+
+
+
+      <section id="info1_3">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-md-6 col-sm-6">
+                    <div class="info-left">
+                        <a href="https://davor.io/Account/Registration?r=4FBA3C" target="_blank">
+                        <img src="img/davor.png" alt="Davor investavimas su kriptovaliuta ir uždarbis">
+                        </a>
+
+                    </div>
+                 </div>
+
+
+                <div class="col-md-6">
+
+                <div class="info-right">
+            <h2>Davor Coin</h2>
+            <div class="hyper"><a href="https://davor.io/Account/Registration?r=4FBA3C" target="_blank">Apsilankyk Davor Coin</a></div>
+
+
+                    <p>
+                         Davor Coin tai jau įsitvirtines kriptovaliutos investavimo projektas sukurtas prancūzų. Šios programos internetinis
+						 puslapis veikia neįtikėtinai gerai, nei viena iš šio tipo investavimo programų nėra veikusi taip sklandžiai kaip Davor Coin.
+						 Tinklalapis yra susilaukęs didelio
+                         susidomėjimo ir žada tikrai įdomę ir pelningą ateiti. Vertą paminėti, kad Davor Coin projektas neslepia jokios informacijos
+                         ir šios programos įkurėjęs yra atlikęs keletą interviu su YouTube vaizdo klipų kurėjais, kas yra labai retas atvėjis.
+						 Einamouju metu, Davor Coin investavimo tinklalapis yra didžiausia kriptovaliutos pelną siūlanti programa.
+
+                    </p>
+
+
+                    <br>
+                    <p> <b>Pasitikėjimas 9/10</b></p>
+                    <br>
+
+
+                   <a class="btn btn-default btn-lg showcase-btn" href="https://davor.io/Account/Registration?r=4FBA3C">Davor Coin</a>
+
+
+
+                </div>
+
+
+                </div>
+
+            </div>
+
+            <div  id="banner_davor">
+            <a href="https://davor.io/Account/Registration?r=4FBA3C" target="_blank">
+               <img src="img/davor_banner.png" alt="Davor palukanos ir bitcoin investavimas">
+             </a>
+             </div>
+
+        </div>
+    </section>
+
+
+
+    </section>
+
+    <hr>
+
+     <section id="info1_5" >
+        <div class="container">
+            <div class="row">
+
+                <div class="col-md-6 col-sm-6">
+                    <div class="info-left">
+
+                        <a href="https://hextracoin.co/register?referrer=LilDoDo" target="_blank">
+                        <img src="img/hextracoin.png" alt="HextraCoin investavimas su kriptovaliuta ir pelnas">
+                        </a>
+
+
+                    </div>
+                 </div>
+
+
+                <div class="col-md-6">
+
+                <div class="info-right">
+            <h2>Hextra Coin</h2>
+            <div class="hyper"><a href="https://hextracoin.co/register?referrer=LilDoDo" target="_blank">Apsilankyk Hextra Coin </a></div>
+
+
+                    <p>
+                         HextraCoin, tai visai nesenai išlęista investicijų programa. Šiuo metu HextraCoin siūlomos palūkanos
+                          vidutiniškai siekia apie 1.2%. Šios internetinės valiutos vertė per pastarasiais savaites svyruoja kas suteikia
+						  pagrindo manyti, kad valiuta yra naudojama ir tobulinama kiekvieną dieną.
+                         Einamuoju metu HextraCoin investavimo programa veikia be jokių problemų ir dauguma kritikų mano, kad šis investicijų projektas gyvuos
+                         dar ilgą laiką.
+
+                    </p>
+
+
+                    <br>
+                    <p> <b>Pasitikėjimas 8/10</b></p>
+                    <br>
+
+
+                   <a class="btn btn-default btn-lg showcase-btn" href="https://hextracoin.co/register?referrer=LilDoDo">HextraCoin</a>
+
+
+
+                </div>
+
+
+                </div>
+
+            </div>
+
+            <div id="banner_hextra">
+               <a href="https://hextracoin.co/register?referrer=LilDoDo" target="_blank">
+                  <img src="img/hextra_banner.gif" alt="Pelnas naudojantis bitkoinus">
+                </a>
+               <br>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+    -->
+
+	 <div id="bitcoin_wallets1"></div>
+
+
+	   <section id="bitcoin_wallets">
+        <div class="container">
+
+            <div class="row">
+
+               <div class="col-md-12">
+                 <h1 class="text-center">Piniginės</h1>
+               </div>
+
+           </div>
+        </div>
+     </section>
+
+	 <section id="wallets">
+        <div class="container">
+
+            <div class="row">
+
+                <div id="exodus_wallet" class="col-md-6">
+					<img src="img/exodus_img.jpg" alt="Exodus piniginė bitcoin ethereum ir daugelis kitu">
+                 <h1 class="text-center">Exodus <br>
+				 <i class="fa fa-windows fa-1x" aria-hidden="true" title="Windows"></i>
+				 <i class="fa fa-apple fa-1x" aria-hidden="true" title="Mac OS"></i>
+				 <i class="fa fa-linux fa-1x" aria-hidden="true" title="Linux"></i>
+				 </h1>
+
+				 <div class="wallet_description"><b>Kaina:</b> Nemokama</div>
+				 <div class="wallet_description"><b>Saugumas:</b>Aukštas</div>
+				 <div class="wallet_description">
+					<i class="coin_logo cc BTC" title="Bitcoin"></i>
+					<i class="coin_logo cc ETH" title="Ethereum"></i>
+					<i class="coin_logo cc LTC" title="Litecoin"></i>
+					<i class="coin_logo cc DASH" title="DASH"></i>
+					<i class="coin_logo cc BCH" title="Bitcoin Cash"></i>
+					<br>
+
+					<i class="coin_logo cc REP" title="Augur"></i>
+					<i class="coin_logo cc ZEC" title="ZCash"></i>
+					<i class="coin_logo cc DOGE" title="DogeCoin"></i>
+					<i class="coin_logo cc ICN" title="Iconomi"></i>
+					<i class="coin_logo cc BAT" title="BAT"></i>
+					<br>
+
+					<i class="coin_logo cc ETC" title="Ethereum Classic"></i>
+					<i class="coin_logo cc GNT" title="Golem"></i>
+					<i class="coin_logo cc DCR" title="Decred"></i>
+					<i class="coin_logo cc OMG" title="OmiseGO"></i>
+					<i class="fa fa-ellipsis-h fa-2x" title="And More..."></i>
+					<br>
+
+					<a href="https://www.exodus.io/" target="_blank"><button class="wallet_btn btn btn-primary">Apsilankyk</button></a>
+
+				 </div>
+
+               </div>
+
+			   <div id="jaxx_wallet" class="col-md-6">
+					<img src="img/jaxx_img.png" alt="Jaxx internetine bitkoino pinigine ethereum ir daugelis">
+                 <h1 class="text-center">Jaxx <br>
+				 <i class="fa fa-windows fa-1x" aria-hidden="true" title="Windows"></i>
+				 <i class="fa fa-apple fa-1x" aria-hidden="true" title="Mac OS"></i>
+				 <i class="fa fa-linux fa-1x" aria-hidden="true" title="Linux"></i>
+				 <i class="fa fa-android fa-1x" aria-hidden="true" title="Android"></i>
+				 <i class="fa fa-mobile fa-1x" aria-hidden="true" title="iOS"></i>
+				  <i class="fa fa-chrome fa-1x" aria-hidden="true" title="Chrome Extention"></i>
+				 </h1>
+
+				 <div class="wallet_description"><b>Kaina:</b> Nemokama</div>
+				 <div class="wallet_description"><b>Saugumas:</b>Aukštas</div>
+				 <div class="wallet_description">
+					<i class="coin_logo cc BTC" title="Bitcoin"></i>
+					<i class="coin_logo cc ETH" title="Ethereum"></i>
+					<i class="coin_logo cc LTC" title="Litecoin"></i>
+					<i class="coin_logo cc DASH" title="DASH"></i>
+					<i class="coin_logo cc BCH" title="Bitcoin Cash"></i>
+					<br>
+
+					<i class="coin_logo cc REP" title="Augur"></i>
+					<i class="coin_logo cc ZEC" title="ZCash"></i>
+					<i class="coin_logo cc DOGE" title="DogeCoin"></i>
+					<i class="coin_logo cc BAT" title="Basic Attention Token"></i>
+					<i class="coin_logo cc DGD" title="DigixDAO"></i>
+					<br>
+
+					<i class="coin_logo cc ETC" title="Ethereum Classic"></i>
+					<i class="coin_logo cc GNT" title="Golem"></i>
+					<i class="coin_logo cc ICN" title="Iconomi"></i>
+					<i class="coin_logo cc EOS" title="EOS"></i>
+					<i class="fa fa-ellipsis-h fa-2x" title="And More..."></i>
+					<br>
+
+					<a href="https://jaxx.io/" target="_blank"><button class="wallet_btn btn btn-primary">Apsilankyk</button></a>
+
+				 </div>
+
+               </div>
+
+			   <div id="copay_wallet" class="col-md-4">
+					<img src="img/copay_img.png" alt="Copay internetine pinigine bitcoin">
+                 <h1 class="text-center">CoPay <br>
+				 <i class="fa fa-windows fa-1x" aria-hidden="true" title="Windows"></i>
+				 <i class="fa fa-apple fa-1x" aria-hidden="true" title="Mac OS"></i>
+				 <i class="fa fa-linux fa-1x" aria-hidden="true" title="Linux"></i>
+				 <i class="fa fa-android fa-1x" aria-hidden="true" title="Android"></i>
+				 <i class="fa fa-mobile fa-1x" aria-hidden="true" title="iOS"></i>
+				 <i class="fa fa-chrome fa-1x" aria-hidden="true" title="Chrome Extention"></i>
+				 </h1>
+
+				 <div class="wallet_description"><b>Kaina:</b> Nemokama</div>
+				 <div class="wallet_description"><b>Saugumas:</b>Aukštas</div>
+				 <div class="wallet_description">
+					<i class="coin_logo cc BTC" title="Bitcoin"></i>
+
+				 <br>
+
+				 <a href="https://copay.io/" target="_blank"><button class="wallet_btn btn btn-primary">Apsilankyk</button></a>
+
+				 </div>
+
+               </div>
+
+               <div id="green_wallet" class="col-md-4">
+					<img src="img/green_img.jpg" alt="GreenAddress internetine bitkoino pinigine">
+                  <h1 class="text-center">GreenAddress <br>
+				 <i class="fa fa-android fa-1x" aria-hidden="true" title="Android"></i>
+				 <i class="fa fa-mobile fa-1x" aria-hidden="true" title="iOS"></i>
+				  <i class="fa fa-chrome fa-1x" aria-hidden="true" title="Chrome Extention"></i>
+				 </h1>
+
+				 <div class="wallet_description"><b>Kaina:</b> Nemokama</div>
+				 <div class="wallet_description"><b>Saugumas:</b>Vidutiniškas</div>
+				 <div class="wallet_description">
+					<i class="coin_logo cc BTC" title="Bitcoin"></i>
+
+					<br>
+
+					 <a href="https://greenaddress.it/en/" target="_blank"><button class="wallet_btn btn btn-primary">Apsilankyk</button></a>
+
+				 </div>
+               </div>
+
+
+
+			   <div id="mycelium_wallet" class="col-md-4">
+					<img src="img/mycelium_img.png" alt="Mycelium internetine pinigine bitcoin ">
+                 <h1 class="text-center">Mycelium <br>
+				 <i class="fa fa-android fa-1x" aria-hidden="true" title="Android"></i>
+				 <i class="fa fa-mobile fa-1x" aria-hidden="true" title="iOS"></i>
+				  <i class="fa fa-chrome fa-1x" aria-hidden="true" title="Chrome Extention"></i>
+				 </h1>
+
+				 <div class="wallet_description"><b>Kaina:</b> Nemokama</div>
+				 <div class="wallet_description"><b>Saugumas:</b>Vidutiniškas</div>
+				 <div class="wallet_description">
+					<i class="coin_logo cc BTC" title="Bitcoin"></i>
+
+				 <br>
+
+					 <a href="https://wallet.mycelium.com/" target="_blank"><button class="wallet_btn btn btn-primary">Apsilankyk</button></a>
+
+
+
+				 </div>
+               </div>
+
+
+           </div>
+        </div>
+     </section>
+
+
+
+    <hr>
+
+     <section id="info2">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-md-6">
+                    <div class="info-left">
+
+                         <h2 style="text-align: center;">Pliusai </h2>
+
+
+                     <p> <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Investuoti pinigai uždirbami nereikalaujant didelių pastangų</p>
+                     <p> <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Dvigubai didesnes palūkanos nei bankas pasiūlitų</p>
+                     <p> <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Iš investuotų $100 per metus galimą uždirbti apie $1700</p>
+                     <p> <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Investicijų palūkanos ateina kiekvieną dieną</p>
+                     <p> <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Bitkoinas, tai ateities valiuta</p>
+                     <p> <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Daugybę būdų investuoti savo pinigus, įskaitant Bitcoin, <br> Ethereum, LiteCoin it t.t.</p>
+
+
+
+                    </div>
+                 </div>
+
+
+                <div class="col-md-6">
+
+                 <div class="info-right">
+                    <h2 style="text-align: center;">Minusai </h2>
+
+                    <p> <span class="glyphicon glyphicon-remove" aria-hidden="true"> </span> Nėra garantijų dėl puslapio veikimo laikotarpio </p>
+                    <p> <span class="glyphicon glyphicon-remove" aria-hidden="true"> </span> Investuodami į šiuos puslapius rizikuojate savo pinigais  </p>
+
+                 </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <script>
+
+     function validateForm() {
+        var email = document.forms["myForm"]["Email"].value;
+
+        var name = document.forms["myForm"]["Name"].value;
+        var message = document.forms["myForm"]["Message"].value;
+
+
+
+        var atpos = email.indexOf("@");
+        var dotpos = email.lastIndexOf(".");
+
+
+        if (email == "" || name == "" || message == "") {
+          alert("Vardas, Elektroninis Adresas, Žinutė turi būti užpildyti");
+          return false;
+        }
+
+
+
+        if (atpos<1 || dotpos<atpos+2 || dotpos+2>=email.length) {
+          alert("Neteisingas Elektroninis Adresas!!!");
+          return false;
+        }
+
+     }
+
+
+    </script>
+
+
+
+
+
+    <section id="contact">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-md-7 col-sm-7">
+
+                </div>
+                <div class="col-md-5 col-sm-5">
+
+									<!--
+                    <form name="myForm" method="post" action="contactengine.php" onsubmit="return validateForm();">
+									-->
+									<form>
+                        <div class="form-group">
+                         <label style="font-size: 26px;">Klausimai ir Komentarai </label> <br>
+                          <label>Vardas: </label>
+                          <input class="form-control" type="text" name="Name" value="" placeholder="Vardas..." required>
+                        </div>
+                        <div class="form-group">
+                          <label>Elektroninis Adresas: </label>
+                          <input class="form-control" type="text" name="Email" value="" placeholder="Elektroninis Adresas..." required>
+                        </div>
+                        <div class="form-group">
+                          <label>Žinutė: </label>
+                          <textarea class="form-control" name="Message" value="" placeholder="Žinutė..." required></textarea>
+                        </div>
+                        <div id="btn-submit">
+
+                        <button  formaction="contactthanks.php" class="btn btn-default">Siųsti</button>
+
+
+                    </form>
+
+                </div>
+
+
+
+
+
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+      <section class="testimonial">
+        <div class="container">
+            <p>
+               Visa informacija pateikta šiame puslapyje nėra paremta financinių specialistų patarimais ir kiekvienas lankytojas yra asmeniškai atsakingas už savo veiksmus
+            </p>
+
+            <p class="customer">- Labas Crypto</p>
+
+
+
+        </div>
+
+
+    </section>
+
+
+
+
+
+    <footer>
+        <p class="text-center">
+          Copyright &copy; 2017
+          <br>
+          <a href="https://twitter.com/LabasCrypto/" target="_blank"> <i class="fa fa-twitter fa-2x" aria-hidden="true" ></i></a>
+          <i class="fa fa-facebook fa-2x" aria-hidden="true"></i>
+        </p>
+
+    </footer>
+
+
+
+
+    <script
+			  src="https://code.jquery.com/jquery-3.2.1.js"
+			  integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+			  crossorigin="anonymous">
+
+    </script>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+
+
+    <script src="js/animation.js"></script>
+    <script src="js/scrolling.js"></script>
+
+
+
+
+</body>
+</html>
