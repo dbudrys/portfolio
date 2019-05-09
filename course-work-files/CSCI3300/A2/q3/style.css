@@ -1,0 +1,76 @@
+/* Assignment 2    PART 3     Domas Budrys Style Sheet*/
+
+html
+{
+    background-color:#567F8A;
+}
+
+body
+{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 100%;
+    width:800px;
+    margin:0px auto 60px auto;
+    padding:5px;
+    border:3px solid black;
+    background:#285F6E;
+    box-shadow:0 0 5px 5px;
+    color:#2F3940;
+}
+
+header img
+{
+    float: left;
+  
+}
+
+header
+{
+   
+    border-bottom: 3px solid black;
+    background: linear-gradient(45deg, #3F96AE 0%, #3F96AE 33%, #567F8A 33%, #567F8A 66%, #063D4D 66%, #063D4D 100%);
+}
+ 
+
+header h1
+{
+    font-size: 220%;
+    text-indent: 30px;
+    text-align: left;
+    
+}
+
+header h2
+{
+    font-size: 180%;
+    text-indent: 30px;
+    text-align: left;
+    
+}
+
+main h2::first-letter
+{
+    font-size: 200%;
+   
+}
+
+a
+{
+    font-weight:bold;
+    color:green;
+}
+
+ul{
+     margin:0 0 15px 0;
+}
+
+footer
+{
+    font-size: 80%;
+    text-align: center;
+    border-top:3px solid black;
+    background: linear-gradient(135deg, #063D4D 0%,#063D4D 33%, #567F8A 33%, #567F8A 66%, #3F96AE 66%, #3F96AE 100%);
+   
+}
+
+

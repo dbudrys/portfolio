@@ -1,0 +1,67 @@
+<!DOCTYPE html>     
+
+  <!-- Assignment 3 PART 1  Favorite Soccer Team   Domas Budrys CSCI - 3300-->  
+
+<html lang= "en-us">
+<head>
+    <meta charset= "utf-8">
+     <title>Domas Budrys' Favorite Soccer Team Page</title>
+     
+     <link rel="stylesheet" type="text/css" href="style.css">
+    <script type= "text/javascript">
+    function information()  
+    {
+        var name = prompt ("What is the name of Domas' favorite soccer team? ");
+        document.getElementById('myName').innerHTML = name;
+        
+        var nickname = prompt ("What is the nickname of Domas' fovorite soccer team? ");
+        document.getElementById('myNickname').innerHTML = nickname;
+        
+        var stadium = prompt ("What is stadium name of Domas' favorite soccer team? ");
+        document.getElementById('myStadium').innerHTML = stadium;
+        
+        var league = prompt ("What league is Domas's team playing in? ");
+        document.getElementById('myLeague').innerHTML = league;
+        
+        var player = prompt ("What is Domas' All-time favorite player? ");
+        document.getElementById('myPlayer').innerHTML = player;
+    }
+
+    
+    
+    </script>
+    
+</head>
+
+<body>
+    <header>
+        <h1>Domas Budrys' Favotire Soccer Team</h1>
+        <br>
+    </header>
+    
+    <main>
+        <p>This page will prompt Domas Budrys for information on his favorite soccer team and
+        will replace the current values with new information.</p>
+        
+        <h2> Click on the button bellow to enter new information</h2>
+        
+        <p> <button type= "button" onclick= "information()"> Enter Domas' Favorite Team information </button></p>
+    
+    
+    
+        <h3>Team name: <span id= "myName" > Waiting for input </span></h3>
+        
+        <h3>Nickname: <span id= "myNickname"> Waiting for input</span></h3>
+        
+        <h3>Stadium / Ground:  <span id= "myStadium"> Waiting for input</span></h3>
+        
+        <h3> League: <span id= "myLeague" > Waiting for input</span></h3>
+        
+        <h3> Favorite All-time player: <span id= "myPlayer"> Waiting for input </span></h3>
+        
+    </main>
+
+
+
+</body>
+</html>

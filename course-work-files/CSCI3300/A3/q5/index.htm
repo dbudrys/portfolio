@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+
+
+  <!-- Assignment 3 PART 5 Age Range Check Domas Budrys CSCI - 3300-->
+
+<html lang= "en-us">
+<head>
+    <meta charset= "utf-8">
+    <title>Age Range Check</title>
+    
+      <link rel="stylesheet" type="text/css" href="style.css">
+      
+      <script type="text/javascript">
+        
+        function andFunction() {
+            
+            var text;
+            
+            var age = prompt ("Enter number");
+            
+            if (age >= 16 && age <= 18) {
+                text ="Age entered:" + age + " is in range. Can play in youth team";
+            }
+            else{
+                text = " you can not play in youth team";
+            }
+            
+                
+            document.getElementById("number").innerHTML = text;
+        }
+        
+        function orFunction() {
+            
+             var text;
+             
+             var age = prompt ("Enter number");
+             
+             if (age < 16 || age > 18) {
+                text = "You can not play in youth team";
+             }
+             else {
+                text = "Age entered:" + age + " is in range. Can play in youth team";
+             }
+             
+             document.getElementById("number").innerHTML = text;
+        }
+        
+        
+        
+        
+        
+      </script>
+</head>
+
+<body>
+
+    <header>
+        <h1> Domas Budrys' Age Range Check </h1>
+    </header>
+    
+    <main>
+      <p>This page will prompt Domas Budrys for his age to check if he can play in the youth team
+      (age 16 to 18).</p>
+      
+      <h2>Click on the buttons below to enter Domas' age </h2>
+      
+      <p> <button type="button" onclick= "andFunction()">Enter age to see if it is within the range of
+      16-18. Use AND logical operator</button></p>
+      
+      <p> <button type="button" onclick= "orFunction()">Enter number to see if it is outside the range of
+      16-18. <br>Use OR logical operator</button></p>
+        
+        
+      <p> <span id="number"> </span> </p>  
+        
+    </main>
+ 
+ 
+
+</body>
+</html>

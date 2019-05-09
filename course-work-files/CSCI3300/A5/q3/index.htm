@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+    <!--Assignment 5 Part 3 Po's Dumpling Log. Domas Budrys CSCI 3300 --> 
+
+<html>
+<head>
+    <meta charset="utf-8">
+    
+    <title>Domas Budrys' Kung Fu Panda Po Dumpling Log</title>
+     <link rel="stylesheet" type="text/css" href="style.css">
+      <script type= "text/javascript">
+        function dumpling (){
+            
+            var month = " ";
+            
+            var ate = " ";
+            
+            var monthly = 0;
+            
+            var sum = 0;
+            
+            var text;
+            
+         
+            
+            month = prompt ("Enter the month");
+            
+            ate = prompt ("How many dumplings did Po eat?");
+            
+           sum = sum + parseInt (ate);
+            
+            var topLine = "Month  &nbsp; &nbsp; Number of Dumplings";
+            document.getElementById('topLine').innerHTML = topLine;
+            
+            do
+            {
+                
+                 
+                monthly = month + "&nbsp; &nbsp; &nbsp; &nbsp;" + ate + " Dumplings";
+                
+                document.getElementById("result").innerHTML += monthly + "<br>";
+                
+            
+                
+                month = prompt ("Enter another month or enter 'done' when oyu finished");
+                
+                if (month != "done")
+                {
+                
+                    ate = prompt ("Enter another number of dumplings Po ate?");
+                     sum = sum + parseInt (ate) ;
+                }
+               
+                
+            }//end of do
+            
+            while (month != "done") {
+                
+            
+            
+                
+            }//end of while
+            
+            
+           
+            document.getElementById("totally").innerHTML = "Po ate a total of " + sum + " dumplings.";
+            
+           
+            
+        }//end of dumpling function
+        
+    
+        
+        
+      </script> 
+    
+</head>
+
+<body>
+    <header>
+        <h1>Domas Budrys' Kung Fu Panda Po Dumpling Log</h1>
+    </header>
+    
+    <main>
+        <h2>Click on the buttons below to enter the number of dumplings Po eats every month.</h2>
+        
+        <p> <button type="button" onclick="dumpling()"> Domas' Po Po dumplings log</button></p>
+
+    </main>
+    
+    <div>
+        <p> Po's dumpling log: </p>
+        <p> <span id = "topLine"> </span></p>
+        <p> <span id = "result"> </span></p>
+         <p> <span id = "totally"> </span></p>
+        
+    </div>
+
+
+
+</body>
+</html>

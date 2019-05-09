@@ -1,0 +1,141 @@
+
+<!DOCTYPE html>
+     <!--Assignment 7 Part 1  Kung Fu Panda Po Magic Functions . Domas Budrys CSCI 3300 --> 
+
+
+<html>
+<head>
+    <meta charset="utf-8">
+    
+    <title>Domas Budrys' Kung Fu Panda Po Magic Functions</title>
+     <link rel="stylesheet" type="text/css" href="style.css">
+      <script type= "text/javascript">
+        function DomasMath()
+        {
+           var x= 0;
+           var y= 0;
+           var exp= 0;
+           var area= 0;
+           var sqrt= 0;
+        
+        
+           do
+           {
+        
+           x = parseInt (prompt ("Enter a positive number"));
+          
+           
+        
+           while (x < 0 || isNaN(x))
+           {
+             x = prompt ("number must be positive please enter again");
+             
+           }//end of while
+           
+           y = parseInt (prompt ("Enter a positive number"));
+           
+           while ( y< 0 || isNaN(y)) {
+            
+            y = prompt ("Number must be positive please enter again");
+           }//end of while
+           
+           flag = true;
+           }//end of DO
+           
+           while(flag != true)
+           
+           document.getElementById('first').innerHTML = "Domas first number is " +x;
+           document.getElementById('second').innerHTML = "Domas second number is " +y;
+            
+            exp = DomasExp(x,y);
+            area = DomasArea (x,y);
+            sqrt = DomasDistance (x,y);
+           
+           document.getElementById('exp').innerHTML = x + "<sup>" + y+ "</sup> = "  + exp.toFixed(2);
+           document.getElementById('area').innerHTML = "The area of rectangle with a base of "+
+                                                        x + " and a height of " + y + " = " + x + " x " + y + " = " + area.toFixed(2) ;
+           document.getElementById('distance').innerHTML = "This distance between two points  (0,0) and (" + x + "," + y +
+                                                        ") = " + "\u221A ( (" + x + "-0)<sup>2</sup> + (" + y +"-0) = " + sqrt.toFixed(2);
+       
+        }//end of DomasMath
+        
+        
+        
+        function DomasExp(x,y)
+        {
+         var result = Math.pow(x,y);
+         
+         return result;
+         
+          
+        }//end of DomasEXP
+        
+        
+        function DomasArea(x,y)
+        {
+            var result = x * y;
+            
+            return result;
+        }// end of DomasArea
+        
+        
+        function DomasDistance(x,y)
+        {
+           var x2 = x;
+           var y2= y;
+           var x1 = 0;
+           var y1= 0;
+           
+            result = Math.sqrt((x2 -x1) * (x2 - x1) + (y2 - y1) * (y2 -y1));
+            
+            return result; 
+        }//end of DomasDistace
+        
+        
+     
+        
+        
+      </script> 
+    
+</head>
+
+<body>
+    <header>
+        <h1>Domas Budrys' Kung Fu Panda Po Magic Functions</h1>
+    </header>
+    
+    <main>
+        
+        <h2>Click on the button below to enter Po's two magic numbers.</h2>
+        
+        <p>Domas will take the numbers and do the calculation for you using his magic funcitions</p>
+        
+        <p> <button type="button" onclick="DomasMath()"> Enter Two Magic Numbers Begin</button></p>
+        <br>
+        
+    </main>
+    
+    <div>
+        
+        
+        
+         
+         <p> <span id = "first"> </span></p>
+         <p> <span id = "second"> </span></p>
+         <p> <span id = "exp"> </span></p>
+         
+         <p> <span id = "area"> </span></p>
+         <p> <span id = "distance"> </span></p>
+         
+       
+         
+         
+         
+        
+         
+    </div>
+
+
+
+</body>
+</html>

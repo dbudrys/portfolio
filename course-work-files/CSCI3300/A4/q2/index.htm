@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+
+<!-- Assignment 4 PART 2 Po Power Level Domas Budrys CSCI - 3300-->
+
+
+<html>
+<head>
+    <meta charset= "utf-8">
+    
+    <title>Domas Budrys' Kung Fu Panda Body Mass Index</title>
+    
+    <link rel="stylesheet" type="text/css" href="style.css">
+    
+    <script type= "text/javascript">
+        
+        function bmiIndex()
+        {
+         var text;
+         
+         
+         var weight = prompt ("Enter Po's weight");
+         document.getElementById('inputWeight').innerHTML = "Po's weight is " + weight+ " pounds";
+         
+         var height = prompt ("enter Po's height in inches");
+         document.getElementById('inputHeight').innerHTML = "Po's height is " + height + " inches";
+         
+         var total = weight * 703 / (height * height);
+         var t = total.toFixed(2);
+         
+         if (total < 18) {
+            text = "Po is underweight";
+         }
+         
+         else if (total >= 18 && total < 24.9){
+            text = "Po has normal weight";
+         }
+         
+         else if (total >= 25 && total < 29.9){
+            text = "Po is overweight";
+         
+         }
+        
+        else if (total > 30) {
+            text = "Po is obese";
+        }
+            
+       
+          
+          document.getElementById('status').innerHTML = text;
+          document.getElementById('totalBMI').innerHTML = "Po's BMI is " + t + ".";
+          
+          
+          
+        }
+        
+            
+    </script>
+    
+    
+    
+</head>
+
+<body>
+     <header>
+        <h1> Domas Budrys' Kung Fu Panda Body Mass Index</h1>
+    </header>
+     
+     <main>
+        <p> This page will prompt Domas Budrys for Kung Fu Panda Po's weight and height.
+        The promgram will convert the given input into Po's body mass index, and will inform
+        Domas if Po is overweight or underweight</p>
+        <br>
+        
+        <p>BMI = weight x 703 / height &sup2;</p>
+        <p>Weight in pounds. Height in inches</p>
+        <p>If Po's BMI is less than 18. Po is Underweight</p>
+        <p>If Po's BMI is between 18 and 24.9. Po has normal weight</p>
+        <p>If Po's BMI is between 25 and 29.9. Po is overweight</p>
+        <p>If Po's BMI is greater than 30. Po is obese</p>
+        
+        <h2>Click on the buttons below to enter Po's weight and height. </h2>
+        
+         <p> <button type= "button" onclick = "bmiIndex ()">Enter Domas Budrys Po's weight and height </button></p>
+         
+         
+        <div>
+         <p> Po's BMI:
+         
+         <p> <span id="inputWeight"> </span></p>
+         <p> <span id="inputHeight">Current Po' Body Mass Index</span> </p>
+         <p> <span id="totalBMI"> </span></p>
+         <p> <span id="status" > </span></p>
+     
+         
+        </div>
+         
+        
+        
+     </main>
+
+
+
+</body>
+</html>

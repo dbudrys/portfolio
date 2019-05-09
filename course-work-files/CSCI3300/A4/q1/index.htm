@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+
+<!-- Assignment 4 PART 1 Po Power Level Domas Budrys CSCI - 3300-->
+
+
+<html>
+<head>
+    <meta charset= "utf-8">
+    
+    <title>Domas Budrys' Kung Fu Panda Po Power Level</title>
+    
+    <link rel="stylesheet" type="text/css" href="style.css">
+    
+    <script type= "text/javascript">
+        
+        function powerList()
+        {
+           var text1;
+           var text;
+           
+           var power = prompt ("Enter Po's power level");
+          
+           
+           if (power < 0) {
+            text1 = "Po's power level is " + power;
+            text = "Po eats too much pho";
+           }
+           
+           else if (power> 0 && power <= 10) {
+            text1 = "Po's power level is " + power;
+            text ="Po protects the valley of peace";
+           }
+           
+           else if (power >= 11 && power <= 20) {
+            text1 = "Po's power level is " + power;
+            text = "Po defeats wolf bandits";
+           }
+           
+           else if (power >=21 && power <= 30) {
+            text1 = "Po's power level is " + power;
+            text = " Po reaches Gongmen City";
+           }
+            
+            else if (power >= 31 && power<= 40) {
+                text1 = "Po's power level is " + power;
+                text = "Po destroys the tower and an arsenal of cannons";
+                
+            }
+            
+            else if (power> 40) {
+                text1 = "Po's power level is " + power;
+                text = "Po defeats Lord Shen";
+            }
+            document.getElementById('current').innerHTML = text1;
+            document.getElementById('poLevel').innerHTML = text;
+            
+        }
+        
+            
+    </script>
+    
+    
+    
+</head>
+
+<body>
+     <header>
+        <h1> Domas Budrys' Kung Fu Panda Po Power Level </h1>
+    </header>
+     
+     <main>
+        <p> This page will prompt Domas Budrys for Kung Fu Panda Po's power level
+        (in number). The program will convert the given inout into Po's power
+        metric.</p>
+        <br>
+        
+        <p>less than 0: Po eats too much pho</p>
+        <p>0 to 10: Po protects the valley of peace</p>
+        <p>11 to 20: Po defeats wolf bandits</p>
+        <p>21 to 30: Po reaches Gongmen City</p>
+        <p>31 to 40: Po destroys the tower and an arsenal of cannons</p>
+        <p>Greater than 40: Po defeats Lord Shen</p>
+        
+        <h2>Click on the buttons below to enter Po's power level </h2>
+        
+         <p> <button type= "button" onclick = "powerList()">Enter Domas Budrys Po's power level </button></p>
+         
+         
+        <div>
+         <p> Po's power:
+         <p> <span id="current"> </span></p>
+         <p> <span id="poLevel">Current Po's power level</span> </p>
+         
+        </div>
+         
+        
+        
+     </main>
+
+
+
+</body>
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+    
+    <!-- Assignment 4 PART 3 Employee Net Pay Domas Budrys CSCI - 3300-->
+
+<html lang= "en-us">
+    
+<head>
+    <meta charset= "utf-8">
+    <title>Domas Budrys' Employee Net Pay</title>
+     <link rel="stylesheet" type="text/css" href="style.css">
+     
+     <script type= "text/javascript">
+        function information () {
+            
+            var text;
+            
+            
+            var hourly = prompt ("Enter emplyoee's hourly rate $");
+            document.getElementById('hourlyPay').innerHTML = "Employee's hourly rate $" +hourly;
+            
+            var hours = prompt ("Enter number of hours worked this week");
+            document.getElementById('hoursWorked').innerHTML = "Number of hours worked this week: " + hours;
+            
+            var dependents = prompt ("Enter number of dependents")
+            document.getElementById('depNumber').innerHTML = "Number of dependents " + dependents;
+            
+            var totalPay;
+            totalPay= hourly * hours;
+            
+            var overTime = (hours - 45) * 1.5;
+            
+            var totalOverTime = hourly * hours + overtime *hourly;
+            
+            
+            
+            if (hours <= 45) {
+                if (dependents == 0) {
+                  text = "This employee earned this week" + totalPay - (totalPay* 0.25) + "$";
+                    
+                }
+                else if (dependents >=1 && dependents <=3) {
+                    text = "This employee earned this week" + totalPay - (totalPay* 0.2) + "$";
+                }
+                
+                else if (dependents >=4 && dependents <=6) {
+                    text = "This employee earned this week" + totalPay - (totalPay* 0.1) + "$";
+                }
+         
+                else if (dependents >=6 ) {
+                    text = "This employee earned this week" + totalPay - (totalPay* 0.05) + "$";
+                }
+            }
+            
+            if (hours > 45) {
+                if (dependents ==0) {
+                    text = "This employee earned this week" +  totalOverTime - (totalOverTime* 0.25) + "$";
+                }
+                
+                else if (dependents >= 1 && dependents <=3 ){
+                    text = "This employee earned this week" +  totalOverTime - (totalOverTime* 0.2) + "$";
+                }
+                
+                else if (dependents >= 4 && dependents <= 6) {
+                    text = "This employee earned this week" +  totalOverTime - (totalOverTime* 0.1) + "$";
+                }
+                
+                else if (dependents > 6) {
+                    text = "This employee earned this week" +  totalOverTime - (totalOverTime* 0.05) + "$";
+                }
+            }
+            
+            document.getElementById('payment').innerHTML = text;
+            
+        }
+        
+        
+     </script>
+    
+</head>
+
+<body>
+
+        <header>
+        <h1> Domas Budrys' Employee Net Pay </h1>
+        </header>
+     
+     <main>
+        <p> This page will prompt Domas Budrys to cakculate an employee's net pay. <br>
+        Domas Budrys will be prompted for:</p>
+        <br>
+        
+        <ul>
+            <li> Employee's hourly rate of pay;</li>
+            <li> Number of hours worked that week;</li>
+            <li> Number of dependents employee has.</li>
+            
+        </ul>
+        
+        <h2>Click on the buttons below to enter Domas' employee pay information </h2>
+        
+         <p> <button type= "button" onclick = "information()">Enter Domas' employes net pay </button></p>
+         
+         
+         <div>
+            <p><span id= "hourlyPay"> </span></p>
+            <p><span id= "hoursWorked" > </span></p>
+            <p><span id= "depNumber"> </span></p>
+            <p><span id= "payment"> </span></p>
+            
+         </div>
+         
+     </main>
+
+</body>
+</html>

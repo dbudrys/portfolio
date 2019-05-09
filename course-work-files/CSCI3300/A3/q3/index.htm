@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+    
+    
+ <!-- Assignment 3 PART 3  Dance Studio Name  Domas Budrys CSCI - 3300-->
+
+
+<html lang= "en-us">
+    
+<head>
+    <meta charset= "utf-8">
+    <title>Dance Studio Name</title>
+    
+    <link rel="stylesheet" type="text/css" href="style.css">
+    
+    <script type= "text/javascript">
+        function information() {
+            var name1 = prompt ("First Name");
+            document.getElementById('firstName').innerHTML = name1;
+        
+            var name2 = prompt ("Last Name");
+            document.getElementById('lastName').innerHTML = name2;
+        
+            var name3 = prompt ("School Name");
+            document.getElementById('schoolName').innerHTML = name3;
+        
+        
+            var letter1 =name1.charAt(0);
+            var letter2 =name2.charAt(0);
+            
+        
+            var finish = letter1 + letter2 + name3 + " " + "Studio";
+            document.getElementById('studioName').innerHTML = finish;
+            
+            
+        }
+        
+        
+        
+    </script>
+    
+</head>
+
+<body>
+    
+    <header>
+        <h1> Domas Budrys' Dance Studio Name </h1>
+    </header>
+    
+    <main>
+        <p> This page will prompt Domas for information and create the name for his dance studio. </p>
+        
+        <h2>Click on the buttons bellow to enter names: e.g. </h2>
+        
+        <ul>
+            <li>First Name = <span id="firstName"> Waiting for input</span></li>
+            <li>Last Name = <span id="lastName"> Waiting for input</span></li>
+            <li>School Name = <span id="schoolName"> Waiting for input</span></li>
+            
+        </ul>
+        
+        <p>Username would be : <span id="studioName" > Waiting for input</span></p>
+        
+        <p> <button type= "button" onclick = "information()">Enter Names </button></p>
+        
+    </main>
+
+
+</body>
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+     <!--Assignment 6 Part 1  Kung Fu Panda Divisibility Log. Domas Budrys CSCI 3300 --> 
+
+
+<html>
+<head>
+    <meta charset="utf-8">
+    
+    <title>Domas Budrys' Kung Fu Panda Divisibility Log</title>
+     <link rel="stylesheet" type="text/css" href="style.css">
+      <script type= "text/javascript">
+        function divisibility()
+        {
+           var score = 0;
+           
+           var threeSum = 0;
+           var fourSum = 0;
+           var threeCount = 0;
+           var fourCount = 0;
+           
+           //var text = "";
+          
+           
+           score = parseInt (prompt ("Enter you number (or enter -999 to quit)"));
+           
+           while (score != -999) {
+            
+            if (score % 3 ==0) {
+                document.getElementById("something").innerHTML += score + " is divisible by three <br>";
+                threeSum += score;
+                threeCount++;
+            }// end of if 
+            
+             if (score % 4 == 0 ){
+                document.getElementById("something").innerHTML += score + " is divisible by four<br>";
+                fourSum += score;
+                fourCount++;
+             
+            }// end of IF
+           
+            
+          
+            
+            score = parseInt (prompt ("Enter you number (or enter -999 to quit)"));
+            
+            
+            
+           }//end of while
+           
+           var averageOf3= parseFloat (threeSum / threeCount);
+           var averageOf4= parseFloat (fourSum / fourCount);
+           
+          
+           document.getElementById("total1").innerHTML = "You entered "+threeCount + " numbers divisible by three <br>" +
+           "The sum of the number is "+ threeSum + ". <br>" +
+           "The average of these numbers is = " + threeSum+ "/" + threeCount + " = " + averageOf3;
+           
+           
+            document.getElementById("total2").innerHTML = "You entered "+fourCount + " numbers divisible by four <br>" +
+           "The sum of the number is "+ fourSum + ". <br>" +
+           "The average of these numbers is = " + fourSum+ "/" + fourCount + " = " + averageOf4;
+        }//end of divisility
+            
+           
+        
+        
+      </script> 
+    
+</head>
+
+<body>
+    <header>
+        <h1>Domas Budrys' Kung Fu Panda Divisibility (3s and 4s) Log </h1>
+    </header>
+    
+    <main>
+        <h2>Click on the buttons below to enter Po's meditation numbers. </h2>
+        <h3>Domas will keep track of numbers divisible by three and four</h3>
+        
+        <p> <button type="button" onclick="divisibility()"> Domas' Po meditaion numbers</button></p>
+
+    </main>
+    
+    <div>
+        <p> Domas' Po meditition numbers: </p>
+        
+         <p> <span id = "something"> </span></p>
+         
+         <p> <span id = "total1"> </span></p>
+         <p> <span id = "total2"> </span></p>
+    </div>
+
+
+
+</body>
+</html>

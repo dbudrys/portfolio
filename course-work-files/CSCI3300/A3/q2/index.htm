@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+
+<!-- Assignment 3 PART 2  Favorite country and city   Domas Budrys CSCI - 3300-->
+
+<html lang= "en-us">
+    
+<head>
+    <meta charset= "utf-8">
+    <title> Favorite Country and City </title>
+    
+     <link rel="stylesheet" type="text/css" href="style.css">
+     
+     <script type= "text/javascript">
+        
+    function favCountry()  {
+        
+        var country = prompt ("What is Domas' favorite country? ");
+        document.getElementById('myCountry').innerHTML = country;
+        
+        
+    }
+    
+    function favCity() {
+        var city = prompt ("What is Domas' favorite city? ");
+        document.getElementById('myCity').innerHTML = city;
+        
+        
+    }
+    
+     </script>
+     
+     
+</head>
+
+<body>
+    
+    <header>
+        <h1> Domas Budrys Favorite Country &amp; City</h1>
+    </header>
+
+
+    <main>
+        <p>This page will prompt Domas Budrys for information on his favorite country and city.</p>
+        
+        <h2>Click on the buttons bellow to enter country and city</h2>
+        
+        <p> <button type= "button" onclick= "favCountry()"> Click here to enter Domas' favorite country </button></p>
+        
+        <p> <button type= "button" onclick= "favCity()"> Click here to enter Domas' favorite city </button></p>
+        <br>
+        
+        <h3> Domas' favorite country is <span id="myCountry">_________</span></h3>
+        
+        <h3> Domas' favorite city is <span id="myCity"> __________</span></h3>
+        
+    </main>
+
+</body>
+</html>

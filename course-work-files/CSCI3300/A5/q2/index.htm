@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+    <!--Assignment 5 Part 2 Po's secret word. Domas Budrys CSCI 3300 --> 
+
+<html>
+<head>
+    <meta charset="utf-8">
+    
+    <title>Domas Budrys' Kung Fu Panda Po Secret Scroll</title>
+     <link rel="stylesheet" type="text/css" href="style.css">
+      <script type= "text/javascript">
+        function secret(){
+            
+             var word = prompt ("Enter Po's secret word. It must contain" +
+                               " exactly 7 characters and there can be not empty spaces" );
+            
+            
+            falseWord = "Please re-eneter Po's secret word. It must contain exactly 7 characters "+
+                        "and there can be no empty spaces";
+            
+            var empty =word.search (" ");
+            
+          
+            
+            while (word.length != 7 || empty >= 0)  {
+                
+              
+                
+                word = prompt (falseWord);
+                
+                  empty = word.search (" ");
+            
+           
+            } //end of WHILE loop
+                
+            
+            
+                document.getElementById("goodWord").innerHTML = "You enter " + word + "<br>"+
+                "Thank you, Po's secret word was validated";
+            
+            
+            
+            
+            
+        }//end of secret function 
+    
+        
+        
+      </script> 
+    
+</head>
+
+<body>
+    <header>
+        <h1>Domas Budrys' Kung Fu Panda Po Secret Scroll</h1>
+    </header>
+    
+    <main>
+        <h2>Click on the buttons below to enter Po's secret word for this secret scroll</h2>
+        
+        <p> <button type="button" onclick="secret()"> Domas' Po secret word</button></p>
+
+    </main>
+    
+    <div>
+        <p> Po's guess: </p>
+        <p> <span id = "goodWord"> </span></p>
+        
+    </div>
+
+
+
+</body>
+</html>

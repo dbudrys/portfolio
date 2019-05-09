@@ -1,0 +1,105 @@
+
+<!DOCTYPE html>
+     <!--Assignment 7 Part 4  Kung Fu Panda Po Toy Sale . Domas Budrys CSCI 3300 --> 
+
+
+<html>
+<head>
+    <meta charset="utf-8">
+    
+    <title>Domas Budrys' Kung Fu Panda Po Toy Sale</title>
+     <link rel="stylesheet" type="text/css" href="style.css">
+      <script type= "text/javascript">
+        function DomasParallel()
+        {
+            var DomasItem= new Array ("Po action figure", "Master Shifu action figure", "Lord Shen action figure");
+            var DomasPrice= new Array (7, 6, 5);
+            
+
+            
+            var text;
+            var price;
+            var cost;
+            
+            var input;
+            var amount;
+            var ask ="";
+            
+            
+            do
+            {
+             
+                
+                input = parseInt( prompt ("Enter the number that corresponds wiht item you want to buy:"));
+                amount = parseInt (prompt("How many of these do yo want?"));
+                
+                ask = prompt("Do you want to purchase another item? (y/n)");
+                
+                
+                input= input -1;
+                
+               
+                 text = "Item: " + DomasItem[input];
+                 price = "Cost: $ " + DomasPrice[input] + " each";
+                 
+                 cost = amount * DomasPrice[input];
+                 
+                document.getElementById("result").innerHTML += text +"<br>"+ price + "<br>" + "Number requested: " +
+                                                            amount + "<br> " + "Total Cost: $ "+ cost.toFixed(2) + "<br>" + "<br>";
+                                                    
+              
+              if (ask == "n" )
+              {
+                var flag = true;
+              }
+                
+               
+            }while(flag != true)//end of DO/While
+            
+            
+            
+        }//end of DomasParallel
+           
+        
+        
+      </script> 
+    
+</head>
+
+<body>
+    <header>
+        <h1>Domas Budrys' Kung Fu Panda Po Toy Sale</h1>
+    </header>
+    
+    <main>
+        
+      
+        
+        <p>Three parallel arrays will hold an toy item's name, price, and identifier
+        The user will make the purchase. <br>
+        The program will calculate the  total cost.</p>
+        
+        <p> <button type="button" onclick="DomasParallel()"> Begin Purchase</button></p>
+        
+        
+        <ol>
+            <li>Po action figure => $ 7</li>
+            <li> Master Shifu action figure => $ 6</li>
+            <li>Lord Shen action figure => $ 5</li>
+        </ol>
+        
+    </main>
+    
+    <div>
+        
+        
+        
+         
+         <p> <span id = "result"> </span></p>
+        
+    </div>
+
+
+
+</body>
+</html>

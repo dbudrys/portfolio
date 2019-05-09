@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+    
+    
+    <!-- Assignment 3 PART 4 Dance Ticket Price  Domas Budrys CSCI - 3300-->
+
+
+<html lang= "en-us">
+    
+<head>
+    <meta charset= "utf-8">
+    <title>Dance Tikcet Price</title>
+    
+    <link rel="stylesheet" type="text/css" href="style.css">
+    
+    <script type="text/javascript">
+        function danceInfo() {
+            
+            var text;
+       
+            var age = prompt ("Enter customer's age");
+           
+        
+            if (age < 4) {
+                text = "Cost of Domas'ticket = $3.00";
+            }
+            
+            else if (4 <= age && age <=16 ){
+                text = "Cost of Domas's ticket = $7.00"
+            }
+            
+            else if (age > 16) {
+                text = "Cost of Domas' ticket = $9.00"
+            }
+            
+            document.getElementById("cost").innerHTML = text;
+           
+        }
+        
+        
+    </script>
+    
+</head>
+
+<body>
+    
+    <header>
+        <h1> Domas Budrys' Dance Ticket Price </h1>
+    </header>
+    
+    <main>
+       
+
+        <p> This page will decide the cost of Domas' dance ticket price based on his customer's age</p>
+        
+        <h2> Click on the botton bellow to enter customer's age</h2>
+        
+        <ul>
+            
+            <li> Under age 4 (age &lt; 4) cost is $3.00 </li>
+            <li> Between ages 4 and 16 (4 &ge; age &le; 16 ) cost is $7.00</li>
+            <li> Older than 16 ( age > 16 ) cost is $9.00</li>
+            
+       </ul>
+        
+        <p> <button type="button" onclick="danceInfo()"> Enter customer's Age </button></p>
+        
+    
+        
+        <p> <span id="cost"> </span> </p>
+      
+    </main>
+
+
+</body>
+</html>

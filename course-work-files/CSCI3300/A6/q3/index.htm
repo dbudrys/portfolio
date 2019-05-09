@@ -1,0 +1,153 @@
+
+<!DOCTYPE html>
+     <!--Assignment 6 Part 3  Kung Fu Panda Po Weekly Pho Log. Domas Budrys CSCI 3300 --> 
+
+
+<html>
+<head>
+    <meta charset="utf-8">
+    
+    <title>Domas Budrys' Kung Fu Panda Po Weekly Pho Log</title>
+     <link rel="stylesheet" type="text/css" href="style.css">
+      <script type= "text/javascript">
+        function log()
+        {
+            
+            var weeks = "";
+            var days = "";
+            
+            weeks = document.getElementById('weeks').value;
+            
+            days = document.getElementById('days').value;
+            
+            weeks = parseInt(weeks);
+            days = parseInt(days);
+            
+            document.getElementById('result').innerHTML = "Po trained " + weeks + " weeks, "+
+            "and he trained " + days+ " days per week.";
+            
+            
+            var d = 0;
+            var w = 0;
+            
+            var count =0;
+            var total =0;
+            var subtotal =0;
+            
+            var dayAmount= "";
+            
+            var text2= "";
+            
+            
+            
+            var dayInput = 0;
+            
+            
+            for (w=1; w<= weeks; w++)
+            {
+                
+                
+                subtotal = 0;
+                
+                text1 = "<br> <br> WEEK "+ w + "<br>";
+                
+                document.getElementById("input").innerHTML += text1;
+                
+                
+               
+                
+                for (d=1; d<= days; d++)
+                {
+                 
+                   
+                  dayInput = parseInt(prompt ("Enter the number of bowls of pho ate for week " +w+ " day " +d ));
+                    
+                  dayAmount = "Number of bowls of pho for  day " +d+ " = " + dayInput + " bowls <br>";
+                  
+                  
+                 document.getElementById('input').innerHTML += dayAmount;
+                  
+                 
+                  total += dayInput;
+                  
+                  
+                  document.getElementById('total').innerHTML = "The total number of bowls of pho "+
+                  "for there weeks = "+ total+ " bowls of pho";
+                
+                
+                   var maxi = Math.max(dayInput);
+                 
+                    
+                }//end of FOR
+                
+                
+                subtotal = subtotal + total;
+                
+                text2 = "Week " + w + " subtotal is " + subtotal+ " bowls of pho <br>" +
+                "Week "+w+ "'s largest day (number of bowls of pho) is " +maxi + " bowls";
+                
+                 document.getElementById("input").innerHTML += text2 ;
+              
+               
+            }//end of for 
+            
+            
+            
+           
+            
+            
+          
+           
+        }//end of rectangle
+            
+           
+        
+        
+      </script> 
+    
+</head>
+
+<body>
+    <header>
+        <h1>Domas Budrys' Kung Fu Panda Po Weekly Pho Log</h1>
+    </header>
+    
+    <main>
+        
+        
+        <p>Number of weeks Po was on pho holiday:  <input type="text" name= "numberOfWeeks" id= "weeks" /> </p>
+        <p>Number of days Po ate pho too much: &nbsp; &nbsp; &nbsp;<input type="text" name= "numberOfDays" id= "days" /> </p>
+        
+        
+        <p> <button type="button" onclick="log()"> Enter the number of bowls of pho ate each day/week</button></p>
+        <br>
+    </main>
+    
+    <div>
+        
+        
+        
+        
+         <p> <span id = "result"> </span></p>
+         
+         <p> <span id = "input"> </span></p>
+         <p> <span id = "total2"> </span></p>
+         <p> <span id = "total"> </span></p>
+         
+         <p> <span id = "titleDo"> </span></p>
+         <p> <span id = "doLoop"> </span></p>
+         
+         <p> <span id = "titleFor"> </span></p>
+         <p> <span id = "forLoop"> </span></p>
+         
+         
+         
+         
+        
+         
+    </div>
+
+
+
+</body>
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+
+    <!-- Assignment 5 Part 1 Po's power in different loops. Domas Budrys CSCI 3300-->
+
+<html>
+<head>
+    <meta charset="utf-8">
+    
+    <title>Domas Budrys' Kung Fu Panda Po Count Down / Count Up</title>
+     <link rel="stylesheet" type="text/css" href="style.css">
+      <script type= "text/javascript">
+        function countDownFor() {
+            
+            var number;
+            var text = "";
+            
+            for (number = 200; number >= 0; number -= 20) {
+               
+                text += number + "<br>";
+                
+            }
+                document.getElementById("downFor").innerHTML = text +  "Po eats too much noodle";
+                
+            
+            
+        }//end of countDown function
+        
+        function countUpFor() {
+            
+            var number;
+            var text = "";
+            
+            for (number = 0; number <= 200; number +=20) {
+                
+                text += number + "<br>";
+            }
+            
+            document.getElementById("upFor").innerHTML = text + "Po defeats Thi Lung";
+            
+            
+            
+            
+            
+        } // end of function countUpFor
+        
+        function countDownWhile () {
+            
+            var text = "";
+            var number = 300;
+            
+            while (number >= 0) {
+                
+                text += number  + "<br>";
+                number -= 30;
+            }
+            
+            document.getElementById("downWhile").innerHTML = text + "Po eats too much porridge"
+        }// end of countDownWhile function
+        
+        function countUpWhile() {
+            
+            var text = "";
+            var number = 0;
+            
+            while (number <= 300) {
+                
+                text += number + "<br>"
+                number += 30;
+                
+            }
+            document.getElementById("upWhile").innerHTML = text + "Po defeats Lord Shen"
+            
+        }//end of countUpWhile function 
+        
+        
+      </script>
+</head>
+
+<body>
+    
+    <header>
+        <h1>Domas Budrys' Kung Fu Panda Po Count Down / Count Up</h1>
+    </header>
+    
+    <main>
+        <h2>Click on the buttons below to do Kung Fu Panda Po Count Down / Count Up</h2>
+        <p> <button type="button" onclick="countDownFor()"> Domas' Po count down 1 using FOR loop</button></p>
+        
+        <p> <button type="button" onclick="countDownWhile()"> Domas' Po count down 2 using WHILE loop</button></p>
+        
+        <p> <button type="button" onclick="countUpFor()"> Domas' Po count up 1 using FOR loop</button></p>
+        
+        <p> <button type="button" onclick="countUpWhile()"> Domas' Po count up 2 using WHILE loop</button></p>
+    <div>
+        
+     <p>Po's Power:</p>
+        <p> <span id= "downFor"> </span></p>
+        <p> <span id= "upFor"> </span></p>
+        <p> <span id= "downWhile"></span> </p>
+        <p> <span id="upWhile"> </span></p>
+        
+    
+    </div>
+    </main>
+    
+    
+    
+
+
+
+</body>
+</html>

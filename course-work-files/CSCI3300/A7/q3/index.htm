@@ -1,0 +1,125 @@
+
+<!DOCTYPE html>
+     <!--Assignment 7 Part 3 Kung Fu Panda Po Magic Square. Domas Budrys CSCI 3300 --> 
+
+
+<html>
+<head>
+    <meta charset="utf-8">
+    
+    <title>Domas Budrys' Kung Fu Panda Po Magic Square</title>
+     <link rel="stylesheet" type="text/css" href="style.css">
+      <script type= "text/javascript">
+        function DomasMagic()
+        {
+            cells = new Array([document.getElementById('cell00'),
+                             document.getElementById('cell01'),
+                             document.getElementById('cell02')],
+                             
+                            [document.getElementById('cell10'),
+                             document.getElementById('cell11'),
+                             document.getElementById('cell12')],
+                            
+                            [document.getElementById('cell20'),
+                             document.getElementById('cell21'),
+                             document.getElementById('cell22')] );
+            
+            valueSetup();
+            
+        }//end of DomasSetup
+        
+        function valueSetup()
+        {
+            var row;
+            var col;
+            
+            var total = 0;
+            total = parseInt(total);
+            
+            for (row = 0; row < 3; row++)
+            {
+                for (col = 0; col < 3; col++)
+                    cells[row][col].innerHTML = prompt ("Enter the number for row " + (row+1) + ", column " + (col+1));
+                 
+                    cells[row][col] = parseInt(cells[row][col]);
+                  total += cells[row][col];
+                
+            }//end of FOR
+            
+            document.getElementById('total').innerHTML = "this is total" + total;
+        }// end of valueSetup
+           
+        
+        
+      </script> 
+    
+</head>
+
+<body >
+    <header>
+        <h1>Domas Budrys' Kung Fu Panda Po Magic Square</h1>
+    </header>
+    
+    <main>
+        
+        <p>Domas will check if the number form a magic square. A magic square exists when all the rows, columns,
+        and diagonals of a square add up to the same number</p>
+        
+        <button type="button" onclick="DomasMagic()"> Enter Po's magic numbers </button>
+        
+        
+        <table id = "myTable">
+            <tr>
+                <td> <span id = "cell00"> </span> </td>
+                <td> <span id = "cell01"> </span> </td>
+                <td> <span id = "cell02"> </span> </td>
+            </tr> <tr>    
+                <td> <span id = "cell10"> </span>  </td>
+                <td> <span id = "cell11"> </span>  </td>
+                <td> <span id = "cell12"> </span>  </td>
+            </tr> <tr>  
+                <td> <span id = "cell20">  </span> </td>
+                <td> <span id = "cell21">  </span> </td>
+                <td> <span id = "cell22">  </span> </td>
+            
+            </tr>
+          
+        </table>
+        
+        
+        <table id = "belowTable">
+            <tr>
+                <td> <button type="button" onclick="DomasMagic()"> Enter Po's magic numbers </button> <span id = "total"> </span> </td>
+            </tr>
+        </table>
+        
+        <table id = "belowTable2">
+            <tr>
+                <td>Result:</td>
+                <td> output of square</td>
+            </tr>
+                
+        </table>
+        
+      
+        
+        
+        
+        
+    </main>
+    
+    <div>
+        
+        
+        
+         
+         
+         
+        
+         
+    </div>
+
+
+
+</body>
+</html>

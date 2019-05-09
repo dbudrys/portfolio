@@ -1,0 +1,37 @@
+/* Assignment 5    Domas Budrys CSCI - 3300*/
+
+html {
+     background-color: #285F6E; 
+    
+    
+}
+
+body {
+     background: #567F8A;
+      font-family: Arial, Helvetica, sans-serif;
+     font-size: 100%;
+     width:650px;
+     margin:0px auto 60px auto;
+     padding:7px;
+     border:3px solid black;
+     
+     box-shadow:0 0 5px 5px;
+     color:#2F3940;
+    
+}
+
+header {
+      border-bottom: 3px solid black;
+      background: #3F96AE;
+}
+
+main h2::first-letter
+{
+    font-size: 200%;
+   
+}
+
+div
+{
+     font-weight: bold;
+}

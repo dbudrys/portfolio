@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+    <!--Assignment 5 Part 4 Po's Po sequence . Domas Budrys CSCI 3300 --> 
+
+<html>
+<head>
+    <meta charset="utf-8">
+    
+    <title>Domas Budrys' Kung Fu Panda Po Sequence</title>
+     <link rel="stylesheet" type="text/css" href="style.css">
+      <script type= "text/javascript">
+        function sequence1 (){
+             
+             var number ;
+            
+             var text = " ";
+             
+           
+          
+                  
+                  for (number = 1; number < 10; number++)
+                  {
+                    var total = (3 * number) + 5;
+                    text += "When n=" + number + "; &nbsp; &nbsp; 3n+5 = 3x" + number +"+5 = "+ (3*number) +"+5 = " + total +"<br>" ;
+                    
+                  }
+                  
+          
+           document.getElementById('solution').innerHTML = text ;
+        
+    
+        
+        }//end of sequence1
+        
+        
+        
+        
+        function sequence2() {
+            
+             var number ;
+            
+             var text = " ";
+             
+           
+          
+                  
+                  for (number = 1; number < 10; number++)
+                  {
+                    var total = 9 - (3* number);
+                    text += "When n=" + number + "; &nbsp; &nbsp; 9-3n = 9-3x" + number +"= 9-"+ (3*number) +" = " + total +"<br>" ;
+                    
+                  }
+                  
+          
+           document.getElementById('solution').innerHTML = text ;
+            
+            
+            
+        }//end of sequence2
+        
+        
+        function sequence3() {
+            
+             var number ;
+            
+             var text = " ";
+             
+           
+          
+                  
+                  for (number = 1; number < 10; number++)
+                  {
+                    var total = (number * number) + 3;
+                    text += "When n=" + number + "; &nbsp; &nbsp; n*n+3 = "+ number + "*" + number+ "+3 = " + (number * number) + "+3 = " + total +"<br>" ;
+                    
+                  }
+                  
+          
+           document.getElementById('solution').innerHTML = text ;
+            
+            
+            
+            
+        }//end of sequence3
+        
+        
+        
+        function sequence4 () {
+            
+            var number ;
+            
+            var text = " ";
+             
+            var a=4;
+            
+            var r=3;
+          
+                  
+                  for (number = 1; number < 10; number++)
+                  {
+                    
+                    
+                    var up = Math.pow (3, number);
+                    var total = a * up
+                    
+                   
+                    
+                    
+                    
+                    text += "When n=" + number + "; &nbsp; &nbsp; 4x" + up + "= " + total+ "<br>" ;
+                    
+                  }
+                  
+          
+           document.getElementById('solution').innerHTML = text ;
+            
+            
+        }//end of sequence4 
+        
+        
+        
+      </script> 
+    
+</head>
+
+<body>
+    <header>
+        <h1>Domas Budrys' Kung Fu Panda Po Dumpling Log</h1>
+    </header>
+    
+    <main>
+        <h2>Click on the buttons below to do Po's sequence.</h2>
+        
+        <p> <button type="button" onclick="sequence1()"> Domas' Po' sequence for 3n+5</button></p>
+        <p> <button type="button" onclick="sequence2()"> Domas' Po' sequence for 9-3n</button></p>
+        <p> <button type="button" onclick="sequence3()"> Domas' Po' sequence for n^2+3</button></p>
+        <p> <button type="button" onclick="sequence4()"> Domas' Po' modified geometric sequence for  ar^n when a=4 r=3</button></p>
+
+
+    </main>
+    
+    <div>
+        <p> Po's sequence: </p>
+        <p> <span id = "solution"> </span></p>
+        
+    </div>
+
+
+
+</body>
+</html>

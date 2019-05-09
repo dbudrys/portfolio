@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+     <!--Assignment 6 Part 2  Kung Fu Panda Po Magic Rectangle. Domas Budrys CSCI 3300 --> 
+
+
+<html>
+<head>
+    <meta charset="utf-8">
+    
+    <title>Domas Budrys' Kung Fu Panda Po Magic Rectangle</title>
+     <link rel="stylesheet" type="text/css" href="style.css">
+      <script type= "text/javascript">
+        function rectangle()
+        {
+            
+            var rows = "";
+            var columns = "";
+            
+            rows = document.getElementById('row').value;
+            
+            columns = document.getElementById('column').value;
+            
+            
+            
+            document.getElementById("result").innerHTML = "Po's magic rectangle has " +rows+ " rows, and "+
+                                                            columns + " columns.";
+              
+            rows = parseInt(rows);
+            columns = parseInt(columns);
+            
+            var r ;
+            var c ;
+            
+            var text1 = "";
+            var text2 = "";
+            
+            var text3 = "";
+            var text4 = "";
+            
+            var text5 = "";
+            var text6 = "";
+            
+            
+            
+             
+            
+            
+            document.getElementById("titleFor").innerHTML = "Nested loop for rectangle";
+            
+            for ( r = 1; r <= rows; r++) {
+                
+                text1 =  "<br> ";
+         
+               
+                for (c =1; c <= columns; c++)
+                {
+                    sum = r+c;
+                    text2 = c+ "+" + r + "=" + sum + "; ";
+                    
+                   document.getElementById("forLoop").innerHTML +=  text2; 
+                }//end of FOR
+                
+               document.getElementById("forLoop").innerHTML +=  text1;
+        
+            
+           
+            }//end of FOR
+            
+            
+            
+           document.getElementById("titleWhile").innerHTML = "Nested While loop rectangle";
+            
+            r = 0;
+            c = 1;
+            
+             while (r < rows) {
+                
+                text3 = "(XY)" + "<br>";
+                r++;
+                
+                while (c < columns) {
+                    
+                    
+                    text4 += "(XY)";
+                    c++;
+                    
+                }
+                document.getElementById('whileLoop').innerHTML += text4;
+                document.getElementById('whileLoop').innerHTML += text3;
+                
+            }//end of WHILE
+           
+           
+            var r = 0;
+            var c = 0;
+            
+            document.getElementById("titleDo").innerHTML = "Nested do....loop for rectangle";
+            
+            do
+           {
+            
+            text5 = "<br>";
+            r++;
+            
+            
+            
+            do {
+                
+                
+                
+                var sum = r+c;
+                c++;
+                
+                text6 +=  "loc(" + r + "+"+ c + ")=" + sum + "; ";
+                
+                
+                document.getElementById('doLoop').innerHTML += text6;
+                }
+                
+                while (c < columns)
+                
+                
+            
+            }//end of DOO
+            while (r< rows)
+            
+         
+          
+           
+        }//end of rectangle
+            
+           
+        
+        
+      </script> 
+    
+</head>
+
+<body>
+    <header>
+        <h1>Domas Budrys' Kung Fu Panda Po Magic Rectangle </h1>
+    </header>
+    
+    <main>
+        
+        <h3>Enter Po's row and column numbers</h3>
+        
+        <p>Po's row: &nbsp;  &nbsp; &nbsp; &nbsp;<input type="text" name= "numberOfRow" id= "row" /> </p>
+        <p>Po's columns:<input type="text" name= "numberOfColumn" id= "column" /> </p>
+        
+        <p> <button type="button" onclick="rectangle()"> generate Po's magic rectangle</button></p>
+        <br>
+    </main>
+    
+    <div>
+        <p> Po's magic rectangle: </p>
+        
+        
+        
+         <p> <span id = "result"> </span></p>
+         
+         <p> <span id = "titleWhile"> </span></p>
+         <p> <span id = "whileLoop"> </span></p>
+         
+         <p> <span id = "titleDo"> </span></p>
+         <p> <span id = "doLoop"> </span></p>
+         
+         <p> <span id = "titleFor"> </span></p>
+         <p> <span id = "forLoop"> </span></p>
+         
+    
+         
+    </div>
+
+
+
+</body>
+</html>
