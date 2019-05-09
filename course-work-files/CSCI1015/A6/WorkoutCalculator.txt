@@ -1,0 +1,106 @@
+/**
+ * CSCI 1015 Program 6
+ * Class representing a workout calculator that calculates the calories burned
+ * performing a variety of activities
+ *
+ * @author Domo
+ */
+
+import java.util.Scanner;
+
+public class WorkoutCalculator {
+
+    // Burn rates per pound for each activity
+    public static final double BADMINTON_BURN = .044;
+    public static final double RUNNING_BURN = .087;
+    public static final double WALKING_BURN = .036;
+    public static final double WEIGHTS_BURN = .042;
+
+    private int weight;
+    private int minutesBadminton;
+    private int minutesRunning;
+    private int minutesWalking;
+    private int minutesWeights;
+    private int totalTime;
+    private double caloriesBadminton;
+    private double caloriesRunning;
+    private double caloriesWalking;
+    private double caloriesWeights;
+    private double totalCalories;
+
+    /**
+     * Prompts the user for weight and minutes spent performing each activity
+     */
+    public void readInput() {
+	Scanner keyboard = new Scanner(System.in);
+	weight = prompt(keyboard, "Please enter your weight: ");
+	minutesBadminton = prompt(keyboard, "Please enter the minutes spent playing badminton: ");
+	minutesRunning = prompt(keyboard, "Please enter the minutes spent running: ");
+	minutesWalking = prompt(keyboard, "Please enter the minutes spent walking: ");
+	minutesWeights = prompt(keyboard, "Please enter the minutes spent lifting weights: ");
+	totalTime = minutesBadminton + minutesRunning + minutesWalking
+	    + minutesWeights;
+    }
+
+    /**
+     * Calculates calories spent and displays the results
+     */
+    public void displayResults() {
+	calculateCalories();
+	displayLine("playing badminton", minutesBadminton, caloriesBadminton);
+	displayLine("running", minutesRunning, caloriesRunning);
+	displayLine("walking", minutesWalking, caloriesWalking);
+	displayLine("lifting weights", minutesWeights, caloriesWeights);
+	System.out.println();
+	displayTotals();
+    }
+
+    /**
+     * Prompts for an integer
+     * @param keyboard a Scanner object to read from
+     * @param prompt a String to display
+     * @return the value read
+     */
+    private int prompt(Scanner keyboard, String prompt) {
+	System.out.print(prompt);
+	int value = keyboard.nextInt();
+	return value;
+    }
+
+    /**
+     * Calculates the calories spent perfoming each activity
+     */
+    private void calculateCalories() {
+	// Calculate the calories burned for each activity
+	caloriesBadminton = BADMINTON_BURN * weight * minutesBadminton;
+	caloriesRunning = RUNNING_BURN * weight * minutesRunning;
+	caloriesWalking = WALKING_BURN * weight * minutesWalking;
+	caloriesWeights = WEIGHTS_BURN * weight * minutesWeights;
+
+	// Calculate the total calories burned
+       totalCalories = caloriesBadminton + caloriesRunning
+	    + caloriesWalking + caloriesWeights;
+    }
+
+    /**
+     * Displays a line with the time spent and calories burned perfoming an
+     * activity
+     * @param activity the activity performed
+     * @param minutes the number of minutes spent working out
+     * @param calories the number of calories spent working out
+     */
+    private void displayLine(String activity, int minutes, double calories) {
+	System.out.println("You spent " + minutes + " minutes " + activity
+			   + " and burned " + calories + " calories.");
+    }
+
+    /**
+     * Displays the total time and calories spent working out
+     */
+    private void displayTotals() {
+	System.out.println("You spent " + totalTime / 60 + " hours and "
+			   + totalTime % 60 + " minutes working out and burned "
+			   + totalCalories + " calories.");
+    }
+
+}

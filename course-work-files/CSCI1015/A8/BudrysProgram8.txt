@@ -1,0 +1,74 @@
+/**
+ * CSCI 1015 Program 8
+ * A program to determine information about the tracks on an album
+ *
+ * @author Domo
+ */
+
+import java.util.Scanner;
+
+public class BudrysProgram8
+{
+    public static final int NUM_TRACKS = 12;
+
+    public static void main(String[] args) {
+	Scanner keyboard = new Scanner(System.in);
+
+	int trackLengths[] = new int[NUM_TRACKS];
+	int minutes, seconds;
+	int shortest, longest, total, average;
+
+	// Prompt the user to enter all of the track lengths
+	System.out.println("Welcome to Dom's Album Length Calculator");
+	System.out.println("Please enter 12 track lengths in minutes and seconds");
+	System.out.println("separated by a space.");
+	System.out.println();
+	for(int i = 0; i < NUM_TRACKS; i++) {
+	    System.out.print("Track " + (i + 1) + ": ");
+	    minutes = keyboard.nextInt();
+	    seconds = keyboard.nextInt();
+	    trackLengths[i] = minutes * 60 + seconds;
+	}
+
+	// Determine the shortest, longest, total, and average track length
+	shortest = 0;
+	longest = 0;
+	total = 0;
+	for(int i = 0; i < NUM_TRACKS; i++) {
+	    if(trackLengths[i] < trackLengths[shortest])
+		shortest = i;
+	    if(trackLengths[i] > trackLengths[longest])
+		longest = i;
+	    total += trackLengths[i];
+	}
+  	average = total / NUM_TRACKS;
+
+	// Display the results
+	System.out.println();
+  	System.out.print("The shortest track is #" + (shortest + 1) + " at ");
+	displayTime(trackLengths[shortest]);
+	System.out.println();
+	System.out.print("The longest track is #" + (longest + 1) + " at ");
+	displayTime(trackLengths[longest]);
+	System.out.println();
+	System.out.print("The total length of the album is: ");
+	displayTime(total);
+	System.out.println();
+	System.out.print("The average length of a track is: ");
+	displayTime(average);
+	System.out.println();
+    }
+
+     /**
+      * Displays time in minutes and seconds
+      * @param totalSeconds the total time in seconds
+      */
+    public static void displayTime(int totalSeconds) {
+	int minutes = totalSeconds / 60;
+	int seconds = totalSeconds % 60;
+	System.out.print(minutes + ":");
+	if(seconds < 10)
+	    System.out.print("0");
+	System.out.print(seconds);
+    }
+}

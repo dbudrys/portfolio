@@ -1,0 +1,53 @@
+/**
+ * CSCI 1015 Program 5
+ * Class representing a ball in a ball-throwing simulation
+* @author Domo
+ */
+public class Ball {
+  private double hDist, vDist, hSpeed, vSpeed;
+
+  /**
+   * Initializes the ball object
+   * @param angle angle the ball is thrown in degrees
+   * @param velocity velocity the ball is thrown in meters/sec
+   * @param height initial height of the ball
+   */
+  public void initialize(double angle, double velocity, double height)
+  {
+      hDist = 0;
+      vDist = height;
+      double angleRad = Math.toRadians(angle);
+      hSpeed = velocity * Math.cos(angleRad);
+      vSpeed = velocity * Math.sin(angleRad);
+  }
+
+  /**
+   * Updates the status of the ball after a given period of time
+   * @param time the time in seconds that has elapsed
+   */
+  public void update(double time)
+  {
+      hDist = hDist + time * hSpeed;
+      double vSpeedNew = vSpeed - 9.8 * time;
+      vDist = vDist  + time * (vSpeed + vSpeedNew) / 2;
+      vSpeed = vSpeedNew;
+  }
+
+  /**
+   * Gets the horizontal distance
+   * @return the horizontal distance in meters
+   */
+  public double getHDist()
+  {
+      return hDist;
+  }
+
+  /**
+   * Gets the vertical distance
+   * @return the vertical distance in meters
+   */
+  public double getVDist()
+  {
+      return vDist;
+  }
+}

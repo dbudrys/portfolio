@@ -1,0 +1,69 @@
+/**
+ * CSCI 1015 Program 3
+ * A program to calculate the age of a dog in human years
+ *
+ * @author Domo
+ */
+
+import java.util.Scanner;
+
+public class BudrysProgram3 {
+
+    public static void main(String[] args) {
+
+	Scanner keyboard = new Scanner(System.in);
+
+	double humanAge;
+
+	System.out.println("Welcome to Dom's Dog Age Calculator!");
+	System.out.println();
+
+	// Prompt for dog's age
+	System.out.print("Please enter the actual age of your dog (1-16): ");
+	int dogAge = keyboard.nextInt();
+
+	// Prompt for dog's weight
+	System.out.print("Please enter your dog's weight in pounds: ");
+	int dogWeight = keyboard.nextInt();
+
+	System.out.println();
+
+	// Validate dog's age
+	if(dogAge < 1 || dogAge > 16) {
+	    System.out.println("Wrong: age is out of range");
+	}
+	// Validate dog's weight
+	else if(dogWeight < 0) {
+	    System.out.println("Wrong: weight cannot be negative");
+	}
+	// Values should be in acceptable ranges
+	else {
+	    // Dog is one year old
+	    if(dogAge == 1) {
+		humanAge = 15;
+	    }
+	    // Dog is 2-5 years old
+	    else if(dogAge <= 5) {
+		humanAge = 4 * dogAge + 16;
+	    }
+	    // Dog is 6-16 years old
+	    else {
+		// Small dog
+		if(dogWeight <= 20) {
+		    humanAge = 4 * dogAge + 16;
+		}
+		// Medium dog
+		else if(dogWeight <= 50) {
+		    humanAge = 4.5 * dogAge + 15;
+		}
+		// Large dog
+		else {
+		    humanAge = 7.5 * dogAge;
+		}
+	    }
+
+	    System.out.println("Your dog's age in human years is " +  humanAge);
+
+	}
+    }
+}

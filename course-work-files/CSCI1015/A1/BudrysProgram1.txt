@@ -1,0 +1,41 @@
+/*
+ * CSCI 1015 Program 1
+ *
+ * A program used to calculate the total amount of money given numbers
+ * in 1, 5, 10, and 20 dollar bills
+ *
+ */
+
+// @author Domo
+
+
+import java.util.Scanner;
+
+public class BudrysProgram1 {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        Scanner keyboard = new Scanner(System.in);
+
+        System.out.println("Welcome to Domas Budrys' money calculator.");
+
+        System.out.println("Enter the number of one-dollar bills: ");
+        int ones = keyboard.nextInt();
+
+        System.out.println("Enter the number of five-dollar bills: ");
+        int fives = keyboard.nextInt();
+
+        System.out.println("Enter the number of ten-dollar bills: ");
+        int tens = keyboard.nextInt();
+
+        System.out.println("Enter the number of twenty-dollar bills: ");
+        int twenties = keyboard.nextInt();
+
+        int totalMoney = ones + 5 * fives + 10 * tens + 20 * twenties;
+
+        System.out.println("Your total is $" + totalMoney);
+    }
+
+}

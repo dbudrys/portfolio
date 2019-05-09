@@ -1,0 +1,32 @@
+/**
+ * CSCI 1015 Program 6
+ * A program to calculate time spent and calories burned during a workout
+ *
+ * @author Domo
+ */
+
+import java.util.Scanner;
+
+public class BudrysProgram6 {
+
+  public static void main(String[] args) {
+
+	Scanner keyboard = new Scanner(System.in);
+
+	System.out.println("Welcome to Dom's Workout Calculator.");
+
+	WorkoutCalculator calculator = new WorkoutCalculator();
+
+	String choice;
+	do {
+	    calculator.readInput();
+	    calculator.displayResults();
+	    System.out.println();
+	    System.out.print("Would you like to calculate calories for another workout? (Y/N): ");
+	    choice = keyboard.next();
+	} while (choice.equalsIgnoreCase("Y"));
+
+	System.out.println("Thank you for using the workout calculator!");
+
+    }
+}

@@ -1,0 +1,38 @@
+import java.util.Scanner;
+
+/**
+ * CSCI 1015 Program 5
+ * This program simulates a ball being thrown
+ * @author Domo
+ */
+public class BudrysProgram5 {
+
+
+    public static void main(String[] args) {
+        Scanner keyboard = new Scanner(System.in);
+
+        System.out.println("Welcome to Dom's ball simulator!");
+        System.out.println();
+
+        // Gather input from the user
+        System.out.print("Please enter the angle in degrees: ");
+        double angle = keyboard.nextDouble();
+        System.out.print("Please enter the initial velocity: ");
+        double velocity = keyboard.nextDouble();
+        System.out.print("Please enter the initial height: ");
+        double height = keyboard.nextDouble();
+        System.out.print("Please enter the time interval: ");
+        double time = keyboard.nextDouble();
+
+        // Simulate the ball being thrown
+        Ball ball = new Ball();
+        ball.initialize(angle, velocity, height);
+        while(ball.getVDist() > 0)
+            ball.update(time);
+
+        // Display the results to the user
+        System.out.println();
+        System.out.println("Distance traveled: " + ball.getHDist() + " meters.");
+    }
+
+}

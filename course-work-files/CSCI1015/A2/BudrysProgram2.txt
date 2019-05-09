@@ -1,0 +1,75 @@
+/**
+ * CSCI 1015 Program 2
+ * A program that calculates time spent and calories burned during a workout
+ *
+ * @author Domo
+ */
+
+import java.util.Scanner;
+
+public class BudrysProgram2 {
+
+    // Burn rates per pound for each activity
+    public static final double BADMINTON_BURN = .044;
+    public static final double RUNNING_BURN = .087;
+    public static final double WALKING_BURN = .036;
+    public static final double WEIGHTS_BURN = .042;
+
+    
+    public static void main(String[] args) {
+
+        Scanner keyboard = new Scanner(System.in);
+
+        System.out.println("Welcome to Dom's Workout Calculator.");
+
+        System.out.println("Please enter your weight:");
+        int weight = keyboard.nextInt();
+
+        System.out.println("Please enter the minutes spent playing badminton:");
+        int minutesBadminton = keyboard.nextInt();
+
+	System.out.println("Please enter the minutes spent running:");
+        int minutesRunning = keyboard.nextInt();
+
+	System.out.println("Please enter the minutes spent walking:");
+        int minutesWalking = keyboard.nextInt();
+
+	System.out.println("Please enter the minutes spent lifting weights:");
+        int minutesWeights = keyboard.nextInt();
+
+	// Calculate the calories burned for each activity
+	double caloriesBadminton = BADMINTON_BURN * weight * minutesBadminton;
+	double caloriesRunning = RUNNING_BURN * weight * minutesRunning;
+	double caloriesWalking = WALKING_BURN * weight * minutesWalking;
+	double caloriesWeights = WEIGHTS_BURN * weight * minutesWeights;
+
+	// Calculate the total calories burned
+	double totalCalories = caloriesBadminton + caloriesRunning
+	    + caloriesWalking + caloriesWeights;
+
+	// Calculate the total minutes of exercies and convert to HH:MM
+	int totalTime = minutesBadminton + minutesRunning + minutesWalking
+	    + minutesWeights;
+	int totalHours = totalTime / 60;
+	int totalMinutes = totalTime % 60;
+
+	System.out.println("You spent "+ minutesBadminton
+			   + " minutes playing badminton and burned "
+			   + caloriesBadminton + " calories.");
+	System.out.println("You spent "+ minutesRunning
+			   + " minutes running and burned "
+			   + caloriesRunning + " calories.");
+	System.out.println("You spent "+ minutesWalking
+			   + " minutes walking and burned "
+			   + caloriesWalking + " calories.");
+	System.out.println("You spent "+ minutesWeights
+			   + " minutes lifting weights and burned "
+			   + caloriesWeights + " calories.");
+	System.out.println();
+	System.out.println("You spent " + totalHours + " hours and "
+			   + totalMinutes + " minutes working out and burned "
+			   + totalCalories + " calories.");
+
+    }
+
+}

@@ -1,0 +1,83 @@
+/**
+ * CSCI 1015 Program 4
+ * A program to calculate the age of a dog in human years
+ * @author Domo
+ */
+
+import java.util.Scanner;
+
+public class BudrysProgram4 {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+
+	Scanner keyboard = new Scanner(System.in);
+
+	double humanAge;
+	String choice;
+
+	System.out.println("Welcome to Dom's Dog Age Calculator!");
+	System.out.println();
+
+	do {
+	    System.out.print("Please enter the name of your dog: ");
+	    String dogName = keyboard.next();
+
+	    // Prompt for dog's age
+	    System.out.print("Please enter the actual age of your dog (1-16): ");
+	    int dogAge = keyboard.nextInt();
+	    while(dogAge < 1  || dogAge > 16) {
+		System.out.println("Error: age is out of range");
+		System.out.print("Please enter the actual age of your dog (1-16): ");
+		dogAge = keyboard.nextInt();
+	    }
+
+	    // Prompt for dog's weight
+	    System.out.print("Please enter your dog's weight in pounds: ");
+	    int dogWeight = keyboard.nextInt();
+	    while(dogWeight < 0) {
+		System.out.println("Error: weight must not be negative");
+		System.out.print("Please enter your dog's weight in pounds: ");
+		dogWeight = keyboard.nextInt();
+	    }
+
+	    System.out.println();
+
+	    // Dog is one year old
+	    if(dogAge == 1) {
+		humanAge = 15;
+	    }
+	    // Dog is 2-5 years old
+	    else if(dogAge <= 5) {
+		humanAge = 4 * dogAge + 16;
+	    }
+	    // Dog is 6-16 years old
+	    else {
+		// Small dog
+		if(dogWeight <= 20) {
+		    humanAge = 4 * dogAge + 16;
+		}
+		// Medium dog
+		else if(dogWeight <= 50) {
+		    humanAge = 4.5 * dogAge + 15;
+		}
+		// Large dog
+		else {
+		    humanAge = 7.5 * dogAge;
+		}
+	    }
+
+	    System.out.println("Your dog's age in human years is " +  humanAge);
+	    System.out.println();
+
+	    System.out.print("Would you like to calculate the age of another dog? (Y/N): ");
+	    choice = keyboard.next();
+	} while (choice.equalsIgnoreCase("Y"));
+
+	System.out.println("Thank you for using the dog age calculator!");
+
+
+    }
+}
