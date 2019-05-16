@@ -1,5 +1,5 @@
 # Portfolio Repository -  [Visit Website](https://dbudrys.github.io/portfolio/)
-Personal website developed by Domas Budrys. 
+Personal website developed by **Domas Budrys**. 
 
 ## Contact Information
 - LinkedIn - [linkedin.com/in/domas-bu](https://dbudrys.github.io/portfolio/)
